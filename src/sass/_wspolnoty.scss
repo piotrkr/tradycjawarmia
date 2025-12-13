@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.img-community {
+	position: relative;
+	height: 70vh;
+	background: url('/dist/img/Porządki.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	filter: brightness(0.6);
+}
+
+.community {
+	font-size: 2rem;
+	font-family: $font-main-title;
+
+	&__title {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-family: $font-main-title;
+		font-size: 4rem;
+		color: $white;
+		font-style: italic;
+	}
+
+	&__container {
+		max-height: 100%;
+		width: 100%;
+		background: url('/dist/img/swirl.png');
+		background-attachment: fixed;
+		color: #462f20;
+	}
+}
