@@ -1656,7 +1656,7 @@
 .img-rosary {
 	position: relative;
 	height: 70vh;
-	background: url(/dist/img/różaniec-2.jpg);
+	background: url(/img/różaniec-2.jpg);
 	background-position: top;
 	background-size: cover;
 	background-attachment: fixed;
@@ -1691,7 +1691,7 @@
 .rosary__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/dist/img/swirl.png);
+	background: url(/img/swirl.png);
 	background-attachment: fixed;
 	color: #462f20;
 }
