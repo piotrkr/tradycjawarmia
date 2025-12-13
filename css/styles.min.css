@@ -467,7 +467,7 @@
 	position: relative;
 	height: 200px;
 	background-color: #f5ebe0;
-	background-image: url(img/swirl.png);
+	background-image: url('img/swirl.png');
 	background-attachment: fixed;
 	overflow: hidden;
 }
