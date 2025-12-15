@@ -16,11 +16,10 @@ const paths = {
 	html: './html/**/*.kit',
 	sass: './src/sass/**/*.scss',
 	js: './src/js/**/*.js',
-	img: './src/img/*',
-	dist: './dist',
-	sassDest: './dist/css',
-	jsDest: './dist/js',
-	imgDest: './dist/img',
+	img: './src/img/*.*', // zmienione na *.* żeby łapało jpg, png itp.
+	sassDest: './css',
+	jsDest: './js',
+	imgDest: './img',
 }
 
 function sassCompiler(done) {
@@ -57,7 +56,7 @@ function handleKits(done) {
 }
 
 function cleanStuff(done) {
-	src(paths.dist, { read: false }).pipe(clean())
+	src(['./css', './js', './img'], { read: false, allowEmpty: true }).pipe(clean())
 	done()
 }
 
@@ -73,22 +72,15 @@ function startBrowserSync(done) {
 function watchForChanges(done) {
 	watch('./*.html').on('change', reload)
 	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript)).on('change', reload)
-	watch(paths.img, convertImages).on('change', reload)
+	watch(paths.img, series(convertImages)).on('change', reload)
 	done()
 }
 
 const mainFunctions = parallel(handleKits, sassCompiler, javaScript, convertImages)
-exports.cleanStuff = cleanStuff
+
+// KLUCZOWA ZMIANA:
+// gulp (default) → NIE czyści, tylko buduje i uruchamia serwer
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges)
 
-function copyHtmlToDist(done) {
-	src('./*.html').pipe(dest(paths.dist))
-	done()
-}
-
-// Task do pełnego buildu produkcyjnego (wszystko w dist)
-exports.build = series(
-	cleanStuff, // najpierw czyści dist
-	mainFunctions, // przetwarza kit, sass, js, img
-	copyHtmlToDist // kopiuje HTML do dist
-)
+// gulp build → czyści i buduje od zera (do produkcji)
+exports.build = series(cleanStuff, mainFunctions)
