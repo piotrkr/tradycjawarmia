@@ -10,7 +10,7 @@
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	background: url('/img/Msza-rytu-rzymskiego.png');
+	background: url('img/Msza-rytu-rzymskiego.png');
 	background-size: cover;
 	background-position: 50%;
 	filter: blur(3px);
