@@ -339,6 +339,7 @@
 	list-style: none;
 	line-height: 2rem;
 	transition: color 0.3s;
+	padding: 0.2em;
 }
 @container (max-width:576px) {
 	.off__screen__toggle {
