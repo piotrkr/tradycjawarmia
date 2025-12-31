@@ -123,7 +123,12 @@
 }
 @container (min-width: 992px) {
     .main-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+}
+@container (min-width: 1200px) and (max-width: 1400px) {
+    .main-title {
+        font-size: 1.8rem;
     }
 }
 .navbar {
@@ -137,11 +142,6 @@
 	.navbar {
 		display: none;
 	}
-}
-@container (min-width: 1200px) and (max-width: 1400px) {
-    .main-title {
-        font-size: 2rem; // lekko mniejszy na "laptopowych" szerokościach
-    }
 }
 .navbar__list {
 	position: absolute;
