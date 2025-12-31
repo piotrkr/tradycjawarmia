@@ -7,10 +7,10 @@
 
     <!-- primary meta tags -->
 
-    <title>Kontakt | Instytut Dobrego Pasterza na Warmii</title>
+    <title>Sakramenty | Instytut Dobrego Pasterza na Warmii</title>
     <meta name="title" content="Instytut Dobrego Pasterza Olsztyn">
     <meta name="description"
-        content="Skontaktuj się z Instytutem Dobrego Pasterza na Warmii. Adres kaplicy, dane kontaktowe, formularz i informacje praktyczne">
+        content="Przygotowanie i udzielanie sakramentów w Instytucie Dobrego Pasterza na Warmii. Chrzest, Komunia Święta, spowiedź, małżeństwo i inne">
 
     <!-- favicon -->
 
@@ -34,13 +34,13 @@
 <body>
     <main>
         <section class="header" id="header">
-            <div class="img-contact">
+            <div class="img-sacraments">
             </div>
-            <h3 class="contact__title">Kontakt</h3>
+            <h3 class="sacraments__title">Sakramenty Święte</h3>
 
             <nav>
                 <div class="header-logo">
-                    <a href="#"><img src="img/logo-white.svg" alt="Logo Duszpasterstwa Tradycji Warmińskiej"
+                    <a href="/"><img src="img/logo-white.svg" alt="Logo Duszpasterstwa Tradycji Warmińskiej"
                             class="logo-white"></a>
                 </div>
 
@@ -144,89 +144,138 @@
 
 
 
-        <section class="contact" id="contact">
+        <section class="sacraments__container" id="sacraments">
 
-            <div class="contact">
-                <div class="contact__content">
+            <h4 class="sacraments__h4">Opis sakramentów</h4>
 
-                    <!-- Lewa kolumna – dane kontaktowe -->
-                    <div class="contact__left-side">
+            <div class="accordion">
+                <button class="accordion__header">
+                    <span class="accordion__icon">+</span>
+                    Chrzest Święty
+                </button>
+                <div class="accordion__panel">
+                    <h2>Sakrament Chrztu Świętego w rycie rzymskim</h2>
+                    <p>Sakrament Chrztu Świętego jest pierwszym i najpotrzebniejszym sakramentem, bramą do życia w
+                        Chrystusie i do pozostałych sakramentów. W rycie rzymskim obrzęd chrztu jest bogaty w symbolikę
+                        i ma jasną strukturę teologiczną.</p>
 
-                        <div class="contact__detail contact__detail--address">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="contact__detail-topic">Adres</div>
-                            <div class="contact__detail-text">
-                                <span>Kościół</span> <br>Olsztyn, ul. Żniwna 7,<br>11-041 Olsztyn
-                            </div>
-                            <div class="contact__detail-text">
-                                <span>Dom Św. Krzyża</span><br> ul. Nowowiejskiego 10 <br>10-162 Olsztyn
-                            </div>
-                        </div>
 
-                        <div class="contact__detail contact__detail--phone">
-                            <i class="fas fa-phone-alt"></i>
-                            <div class="contact__detail-topic">Telefon</div>
-                            <div class="contact__detail-text">
-                                <!-- Numer jako obrazek SVG (klikalny) -->
-                                <a href="tel:572903579">
-                                    <svg width="180" height="30" viewBox="0 0 180 30" xmlns="http://www.w3.org/2000/svg"
-                                        style="background:transparent;">
-                                        <text x="40" y="20" font-family="Fauna One, serif" font-size="16"
-                                            fill="#333">572 903 579</text>
-                                    </svg>
-                                </a>
-                                <!-- Link do kopiowania -->
-                            </div>
-                        </div>
+                    <h3>Znaczenie teologiczne</h3>
 
-                        <div class="contact__detail contact__detail--email">
-                            <i class="fas fa-envelope"></i>
-                            <div class="contact__detail-topic">Email</div>
-                            <div class="contact__detail-text">
-                                <a href="mailto:ibp.warmia@gmail.com" class="contact__email-link">
-                                    ibp.warmia@gmail.com
-                                </a>
-                            </div>
-                        </div>
+                    <p>Chrystus ustanowił chrzest, polecając apostołom: „Idźcie więc i nauczajcie wszystkie narody,
+                        udzielając im chrztu w imię Ojca i Syna, i Ducha Świętego” (Mt 28, 19).
+                        Chrzest gładzi grzech pierworodny i wszystkie grzechy osobiste (jeśli chrzczony je popełnił).
+                        Wprowadza człowieka do wspólnoty Kościoła, czyniąc go dzieckiem Bożym i dziedzicem życia
+                        wiecznego.
+                        Wyciska na duszy niezatarty znak przynależności do Chrystusa (tzw. charakter sakramentalny).</p>
 
-                    </div>
+                    <h3>Kto może otrzymać chrzest?</h3>
 
-                    <!-- Prawa kolumna – formularz -->
-                    <div class="contact__right-side">
-                        <h2 class="contact__text">Wyślij wiadomość</h2>
-                        <p class="contact__description">
-                            Formularz kontaktowy (otworzy Twój program pocztowy):
-                        </p>
+                    <p>Dzieci – zwykle w pierwszych tygodniach lub miesiącach życia (najczęstsza praktyka). <br>
+                        Dorośli – po odpowiednim przygotowaniu w ramach katechumenatu (np. podczas Wigilii Paschalnej).
+                    </p>
 
-                        <form class="contact__form" action="mailto:ibp.warmia@gmail.com" method="post"
-                            enctype="text/plain" onsubmit="return prepareMailto(this);">
-                            <div class="contact__input-box">
-                                <input type="text" name="Imię i nazwisko" placeholder="Twoje imię i nazwisko"
-                                    class="contact__input" required />
-                            </div>
+                    <h3>Podstawowe elementy obrzędu chrztu w rycie rzymskim</h3>
 
-                            <div class="contact__input-box">
-                                <input type="email" name="Email" placeholder="Twój adres email" class="contact__input"
-                                    required />
-                            </div>
+                    <h4>1. Przyjęcie przy wejściu do kościoła</h4>
+                    <p>Kapłan pyta rodziców i chrzestnych:
+                        „O co prosicie Kościół Boży dla tego dziecka?” <br>
+                        Odpowiedź: „O wiarę” lub „O chrzest”. <br>
+                        Następnie kreśli znak krzyża na czole dziecka (rodzice oraz chrzestni czynią to samo) – znak
+                        przynależności do Chrystusa.</p>
+                    <h4>2. Liturgia słowa</h4>
+                    <p>Czytania biblijne i homilia podkreślające znaczenie chrztu.</p>
+                    <h4>3. Modlitwa egzorcyzmu i namaszczenie olejem katechumenów</h4>
+                    <p>Kapłan wypowiada modlitwę o uwolnienie od zła i namaszcza pierś dziecka olejem katechumenów –
+                        znak umocnienia do walki z szatanem.</p>
+                    <h4>4. Błogosławieństwo wody chrzcielnej</h4>
+                    <p>Jedna z najpiękniejszych modlitw euchologicznych w rycie rzymskim – kapłan błogosławi wodę,
+                        wspominając dzieło stworzenia, potop, przejście przez Morze Czerwone i chrzest Jezusa w
+                        Jordanie.</p>
+                    <h4>5. Zrzeczenie się szatana i wyznanie wiary</h4>
+                    <p>Rodzice i chrzestni w imieniu dziecka: <br>
+                        – wyrzekają się grzechu i szatana, <br>
+                        – wyznają wiarę w Trójcę Świętą i Kościół (na podstawie Składu Apostolskiego).</p>
+                    <h4>6. Polanie wodą (lub zanurzenie)</h4>
+                    <p>Kapłan trzykrotnie polewa głowę dziecka wodą chrzcielną (lub zanurza), wypowiadając formułę
+                        sakramentalną:
+                        „N., ja ciebie chrzczę w imię Ojca i Syna, i Ducha Świętego.”
+                        To jest właściwy moment udzielenia sakramentu.</p>
+                    <h4>7. Namaszczenie krzyżmem świętym</h4>
+                    <p>Kapłan namaszcza wierzch głowy krzyżmem – znak pełnego wtajemniczenia w Chrystusa Kapłana,
+                        Proroka i Króla.</p>
+                    <h4>8. Wręczenie białej szaty</h4>
+                    <p>Symbol nowej godności dziecka Bożego i czystości duszy:
+                        „Przyobleczcie się w Chrystusa”.</p>
+                    <h4>9. Wręczenie świecy zapalonej od paschału</h4>
+                    <p>„Niech to dziecko zawsze idzie jako dziecko światła”.</p>
+                    <h4>10. Modlitwy końcowe</h4>
+                    <p>Często Efrem (modlitwa przy ustach i uszach) – prośba o otwartość na słowo Boże i głoszenie
+                        wiary.</p>
 
-                            <div class="contact__input-box contact__input-box--message">
-                                <textarea name="Wiadomość" placeholder="Treść wiadomości"
-                                    class="contact__input contact__input--textarea" required></textarea>
-                            </div>
+                    <h3>Rola rodziców i chrzestnych</h3>
 
-                            <div class="contact__button">
-                                <input type="submit" value="Wyślij" class="contact__submit" />
-                            </div>
-                        </form>
-                    </div>
+                    <p>Rodzice mają obowiązek wychować dziecko w wierze katolickiej.
+                        Chrzestni muszą być wierzącymi, praktykującymi katolikami, którzy ukończyli 16 lat i przyjęli
+                        sakrament bierzmowania. Ich zadaniem jest wspierać rodziców w chrześcijańskim wychowaniu.</p>
+
+                    <h3>Chrzest dorosłych</h3>
+                    <p>W przypadku katechumenów obrzęd jest rozszerzony o dodatkowe namaszczenia, a chrzest
+                        najczęściej udzielany jest przez zanurzenie podczas Wigilii Paschalnej.
+                        Sakrament Chrztu Świętego jest niezapomnianym wydarzeniem – początkiem życia w łasce, wejściem
+                        do rodziny Kościoła i obietnicą życia wiecznego. W rycie rzymskim celebracja ta łączy głęboką
+                        teologię z piękną, zrozumiałą symboliką, która przemawia zarówno do dzieci, jak i dorosłych.</p>
+                </div>
+
+                <button class="accordion__header">
+                    <span class="accordion__icon">+</span>
+                    Bierzmowanie
+                </button>
+                <div class="accordion__panel">
+                    <p>Tutaj treść dotycząca bierzmowania...</p>
+                </div>
+
+                <button class="accordion__header">
+                    <span class="accordion__icon">+</span>
+                    Eucharystia
+                </button>
+                <div class="accordion__panel">
+                    <p>Tutaj treść dotycząca I Komunii Świętej...</p>
+                </div>
+
+                <button class="accordion__header">
+                    <span class="accordion__icon">+</span>
+                    Sakrament pokuty
+                </button>
+                <div class="accordion__panel">
+                    <p>Tutaj treść dotycząca sakramentu małżeństwa...</p>
+                </div>
+
+                <button class="accordion__header">
+                    <span class="accordion__icon">+</span>
+                    Namaszczenie chorych
+                </button>
+                <div class="accordion__panel">
+                    <p>Tutaj treść dotycząca namaszczenia chorych...</p>
+                </div>
+
+                <button class="accordion__header">
+                    <span class="accordion__icon">+</span>
+                    Kapłaństwo
+                </button>
+                <div class="accordion__panel">
+                    <p>Tutaj treść dotycząca kapłanstwa...</p>
+                </div>
+
+                <button class="accordion__header">
+                    <span class="accordion__icon">+</span>
+                    Małżeństwo
+                </button>
+                <div class="accordion__panel">
+                    <p>Tutaj treść dotycząca małżeństwa...</p>
                 </div>
             </div>
 
-            <iframe class="map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2358.2984264445176!2d20.418235891690493!3d53.76637450128611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e27f0e31c1296d%3A0xb02b0beb7a99e73!2s%C5%BBniwna%207%2C%2011-041%20Olsztyn!5e0!3m2!1spl!2spl!4v1765288025031!5m2!1spl!2spl"
-                width="100%" max-width="100%" height="400" style="border:2;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </section>
 
@@ -296,6 +345,7 @@
     </p>
 
 </section>
+
 
 
         <!-- js -->
