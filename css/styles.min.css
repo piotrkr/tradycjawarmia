@@ -121,6 +121,11 @@
 		font-size: 1.9rem;
 	}
 }
+@container header (min-width: 992px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+}
 .navbar {
 	padding: 0 1em;
 	font-family: Fauna One, serif;
