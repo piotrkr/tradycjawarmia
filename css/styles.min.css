@@ -566,7 +566,6 @@
 	container-type: inline-size;
 	container-name: support;
 	width: 100%;
-	z-index: 1;
 }
 .support-container:before {
 	position: absolute;
@@ -585,6 +584,7 @@
 .support__text,
 .support__title {
 	text-align: center;
+	z-index: 1;
 }
 .support__title {
 	padding: 0.5em 1em;
