@@ -574,6 +574,7 @@
 	background-color: hsla(20, 12%, 80%, 0.1);
 	content: '';
 	z-index: 0;
+	pointer-events: none;
 }
 .support {
 	position: relative;
