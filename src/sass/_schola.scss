@@ -1,32 +1,57 @@
 @use 'variables' as *;
-
-.img-schola {
-	position: relative;
-	height: 70vh;
-	background: url('/img/chór.jpg');
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	filter: brightness(0.6);
-}
-
 .schola {
 	font-size: 2rem;
 	font-family: $font-main-title;
-
-	&__h4 {
+	&__container {
+		max-height: 100%;
+		width: 100%;
+		background: url('/img/swirl.png');
+		background-attachment: fixed;
+		color: #462f20;
+		container-type: inline-size;
+		container-name: schola-container;
+	}
+	&__h4,
+	&__h5 {
 		font-family: $font-main-title;
 		font-size: 3rem;
 		text-align: center;
-		padding: 1em 2em;
+		padding-top: 1em;
+		letter-spacing: 0.3rem;
 	}
-
-	&__text {
+	&__h5 {
+		font-size: 2rem;
+		font-style: italic;
+	}
+	&__photo {
+		width: 100vh;
+		background-size: cover;
+		background-position: center;
+		border: 1px solid #462f20;
+		border-radius: 12px;
+		transform: translate(44%);
+		margin-top: 2em;
+	}
+	&__text,
+	&__source,
+	&__contact {
 		font-family: $font-text;
 		font-size: 1.5rem;
+		font-style: italic;
 		padding: 1em 2em;
+		text-align: left;
+		line-height: 1.5em;
 	}
-
+	&__source {
+		font-style: normal;
+		font-size: 1.2rem;
+		text-align: right;
+	}
+	&__contact {
+		font-style: normal;
+		font-size: 1.7rem;
+		text-align: center;
+	}
 	&__title {
 		position: absolute;
 		left: 50%;
@@ -37,16 +62,134 @@
 		color: $white;
 		font-style: italic;
 	}
-
-	&__container {
-		max-height: 100%;
-		width: 100%;
-		background: url('/img/swirl.png');
-		background-attachment: fixed;
-		color: #462f20;
-
-		h4 {
-			letter-spacing: 0.3rem;
+}
+.img-schola {
+	position: relative;
+	height: 70vh;
+	background: url('/img/chór.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	filter: brightness(0.6);
+}
+// Container queries based on Bootstrap breakpoints
+@container (max-width: 575.98px) {
+	// xs (e.g., iPhone 5/SE, iPhone 6/7/8, iPhone X/XS, iPhone 14 Pro Max in portrait)
+	.schola {
+		&__h4,
+		&__h5 {
+			font-size: 2rem;
+			padding-top: 0.5em;
+			letter-spacing: 0.2rem;
+			margin: 0.4em;
+		}
+		&__h5 {
+			font-size: 1.5rem;
+			padding: 1em;
+		}
+		&__photo {
+			width: 90%;
+			transform: translate(15px);
+			margin-top: 1em;
+		}
+		&__text,
+		&__source,
+		&__contact {
+			font-size: 1.2rem;
+			padding: 0.5em 1em;
+			line-height: 1.3em;
+		}
+		&__contact {
+			font-size: 1.4rem;
+		}
+		&__title {
+			font-size: 2.5rem;
+		}
+	}
+	.img-schola {
+		height: 50vh;
+		background-attachment: scroll; // Fixed may not work well on small mobile
+	}
+}
+@container schola-container (min-width: 576px) and (max-width: 767.98px) {
+	// sm (e.g., iPhone 6/7/8 Plus, Galaxy Z Fold 5 in folded mode)
+	.schola {
+		font-size: 1.7rem;
+		&__h4,
+		&__h5 {
+			font-size: 2.5rem;
+			padding-top: 0.75em;
+			letter-spacing: 0.25rem;
+		}
+		&__h5 {
+			font-size: 1.7rem;
+		}
+		&__photo {
+			width: 90%;
+			transform: translate(5%);
+			margin-top: 1.5em;
+		}
+		&__text,
+		&__source,
+		&__contact {
+			font-size: 1.3rem;
+			padding: 0.75em 1.5em;
+			line-height: 1.4em;
+		}
+		&__contact {
+			font-size: 1.5rem;
+		}
+		&__title {
+			font-size: 3rem;
+		}
+	}
+	.img-schola {
+		height: 60vh;
+	}
+}
+@container (min-width: 768px) and (max-width: 991.98px) {
+	// md (e.g., iPad Mini)
+	.schola {
+		font-size: 1.8rem;
+		&__h4,
+		&__h5 {
+			font-size: 2.7rem;
+			padding-top: 0.8em;
+			letter-spacing: 0.25rem;
+		}
+		&__h5 {
+			font-size: 1.8rem;
+		}
+		&__photo {
+			width: 80%;
+			transform: translate(12%);
+			margin-top: 1.5em;
+		}
+		&__text,
+		&__source,
+		&__contact {
+			font-size: 1.4rem;
+			padding: 0.8em 1.8em;
+			line-height: 1.4em;
+		}
+		&__contact {
+			font-size: 1.6rem;
+		}
+		&__title {
+			font-size: 3.5rem;
+		}
+	}
+	.img-schola {
+		height: 65vh;
+	}
+}
+@container schola-container (min-width: 992px) {
+	// lg and above (e.g., Galaxy Z Fold 5 unfolded)
+	// Default styles already apply, but can add overrides if needed for larger screens
+	.schola {
+		&__photo {
+			width: 70vh; // Keep original, assuming vh is intentional for aspect
+			transform: translate(35px);
 		}
 	}
 }
