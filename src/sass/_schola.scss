@@ -111,7 +111,7 @@
 		background-attachment: scroll; // Fixed may not work well on small mobile
 	}
 }
-@container schola-container (min-width: 576px) and (max-width: 767.98px) {
+@container (min-width: 576px) and (max-width: 767.98px) {
 	// sm (e.g., iPhone 6/7/8 Plus, Galaxy Z Fold 5 in folded mode)
 	.schola {
 		font-size: 1.7rem;
@@ -190,6 +190,15 @@
 		&__photo {
 			width: 70vh; // Keep original, assuming vh is intentional for aspect
 			transform: translate(35px);
+		}
+	}
+}
+
+@container (min-width: 1200px) {
+	.schola {
+		&__photo {
+			width: 70vh;
+			transform: translate(80%);
 		}
 	}
 }
