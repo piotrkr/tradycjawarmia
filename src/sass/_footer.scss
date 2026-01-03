@@ -123,7 +123,8 @@
 		.ibp,
 		.nauki,
 		.pch,
-		.missale {
+		.missale,
+		.patriot {
 			flex-shrink: 0;
 			height: 80px;
 			transition: transform 1s ease;
@@ -140,7 +141,8 @@
 			.ibp,
 			.pch,
 			.nauki,
-			.missale {
+			.missale,
+			.patriot {
 				height: auto;
 				max-height: 60px;
 			}
@@ -231,7 +233,7 @@
 			left: 11%;
 			font-size: 3rem;
 			justify-content: flex-start;
-			margin-top: 3.5em;
+			margin-top: 3.3em;
 			// margin-bottom: 0;
 		}
 
@@ -242,7 +244,7 @@
 			width: 100%;
 			order: 4;
 			justify-content: flex-end;
-			gap: 80px;
+			gap: 60px;
 			flex-wrap: nowrap;
 		}
 
