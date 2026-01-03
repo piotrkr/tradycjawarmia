@@ -1,0 +1,176 @@
+@use 'variables' as *;
+
+.header-logo {
+	height: 0;
+}
+
+.img-contact {
+	position: relative;
+	height: 70vh;
+	background: url('/img/Pisma.jpg');
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	filter: brightness(0.5);
+}
+
+.contact {
+	width: 100%;
+	background: url('/img/swirl.png');
+	background-attachment: fixed;
+	border-radius: 6px;
+	padding: 20px 60px 30px 40px;
+
+	&__title {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-family: $font-main-title;
+		font-size: 4rem;
+		color: $white;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__left-side {
+		width: 25%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 15px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 70%;
+			width: 2px;
+			right: -15px;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #afafb6;
+		}
+	}
+
+	&__detail {
+		margin: 14px;
+		text-align: center;
+
+		i {
+			font-size: 30px;
+			color: #dbc1a9;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__detail-topic {
+		font-size: 18px;
+		font-weight: 500;
+		padding: 0.5em;
+	}
+
+	&__detail-text {
+		font-size: 14px;
+		line-height: 1.3rem;
+		color: #afafb6;
+		padding-bottom: 1em;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	&__detail-topic,
+	&__detail-text {
+		font-family: $font-text;
+		color: #462f20;
+	}
+
+	&__right-side {
+		width: 75%;
+		margin-left: 75px;
+	}
+
+	&__text {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: #462f20;
+	}
+
+	&__text,
+	&__description {
+		font-family: $font-text;
+		margin-bottom: 1em;
+	}
+
+	&__description {
+		line-height: 1.4em;
+		text-align: left;
+	}
+
+	&__input-box {
+		height: 55px;
+		width: 100%;
+		margin: 12px 0;
+
+		&--message {
+			min-height: 110px;
+		}
+	}
+
+	&__input {
+		height: 100%;
+		width: 100%;
+		border: none;
+		outline: none;
+		font-family: $font-text;
+		font-size: 0.8rem;
+		background: #f0f1f8;
+		border-radius: 6px;
+		padding: 1em 2em;
+		resize: none;
+
+		&--textarea {
+			padding: 1em 2em;
+		}
+	}
+
+	&__button {
+		display: inline-block;
+		margin-top: 12px;
+	}
+
+	&__submit {
+		color: #fff;
+		font-size: 18px;
+		outline: none;
+		border: none;
+		padding: 8px 16px;
+		border-radius: 6px;
+		background: #dbc1a9;
+		font-family: $font-text;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: #63412c;
+		}
+	}
+}
+
+.contact__email-link {
+	color: inherit; /* bierze kolor z rodzica – żeby nie był niebieski/podkreślony */
+	text-decoration: none; /* usuwa podkreślenie */
+	transition: opacity 0.3s ease;
+}
+
+.contact__email-link:hover {
+	opacity: 0.8; /* delikatne przyciemnienie/rozejście przy najechaniu */
+}

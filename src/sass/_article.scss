@@ -1,0 +1,102 @@
+@use 'variables' as *; // jeśli masz zmienne, inaczej usuń tę linię
+
+.article-section {
+	padding: 80px 20px;
+	background-image: url('/img/swirl.png');
+	background-attachment: fixed;
+	color: #462f20;
+	overflow: hidden;
+}
+
+.article-container {
+	max-width: 900px;
+	margin: 0 auto;
+	line-height: 1.8;
+	font-size: 1.1rem;
+	font-family: Georgia, 'Times New Roman', serif;
+}
+
+.article-title {
+	font-size: 2.8rem;
+	font-family: $font-text;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #462f20;
+	letter-spacing: 0.1rem;
+}
+
+.article-date {
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: $font-text;
+	color: #462f20;
+	margin-bottom: 50px;
+	display: block;
+}
+
+p {
+	font-family: $font-text;
+	text-align: center;
+}
+
+.article-image {
+	width: 100%;
+	max-height: 600px;
+	object-fit: cover;
+	border-radius: 12px;
+	margin: 40px 0;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+	display: block;
+	text-align: center;
+	margin: 60px 0 20px;
+	font-weight: 600;
+	font-family: $font-text;
+	color: #462f20;
+	text-decoration: none;
+	position: relative; // potrzebne do ::after
+	padding: 8px 0; // trochę miejsca na kreskę
+
+	// Animujemy tylko transform i opacity dla ::after
+	transition: color 0.3s ease;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 2px;
+		background-color: #462f20;
+		transform: translateX(-50%);
+		transition: width 0.4s ease;
+	}
+
+	&:hover {
+		color: #462f20; // zostawiamy ten sam kolor, albo możesz zmienić na ciemniejszy np. #2c1e14
+
+		&::after {
+			width: 60%; // albo 80% / 100% – jak długą chcesz kreskę
+		}
+	}
+}
+
+// Responsywność
+@media (max-width: 768px) {
+	.article-title {
+		font-size: 2.2rem;
+	}
+
+	.article-container {
+		font-size: 1rem;
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.article-title {
+		font-size: 2rem;
+	}
+}

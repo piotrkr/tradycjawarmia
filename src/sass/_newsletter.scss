@@ -1,0 +1,135 @@
+@use 'variables' as *;
+
+// Kontener dla sekcji .newsletter
+.newsletter-container {
+	container-type: inline-size;
+	container-name: newsletter;
+	width: 100%;
+}
+
+.newsletter {
+	position: relative;
+	background-image: url('/img/swirl.png');
+	background-attachment: fixed;
+	overflow: hidden;
+
+	&__title,
+	&__text {
+		text-align: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	// &:before {
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	background-color: rgba(211, 203, 199, 0.1);
+	// 	content: '';
+	// 	z-index: 0;
+	// }
+
+	&__title {
+		padding: 0.5em 1em;
+		font-family: $font-main-title;
+		color: #462f20;
+		letter-spacing: $letter-spacing-1;
+
+		// Docelowy rozmiar na desktopie i większości urządzeń
+		font-size: 3rem;
+	}
+
+	&__text {
+		font-family: $font-text;
+		font-size: 2rem;
+		padding: 0.5em 1em;
+		color: #462f20;
+		line-height: 3rem;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	// Container queries – zmniejszamy tylko na mniejszych urządzeniach
+
+	// Bardzo małe smartfony – iPhone 5/SE (~320px)
+	@container newsletter (max-width: 479px) {
+		&__title {
+			font-size: 2rem; // mniejszy tytuł – nie za duży na małym ekranie
+			padding: 0.6em 1em;
+		}
+
+		&__text {
+			font-size: 1.5rem;
+			line-height: 2.4rem;
+		}
+	}
+
+	// Małe i średnie smartfony (do ~576px) – obejmuje większość iPhone'ów w portrait
+	@container newsletter (max-width: 576px) {
+		&__title {
+			font-size: 2.3rem;
+		}
+
+		&__text {
+			font-size: 1.7rem;
+			line-height: 2.7rem;
+		}
+	}
+
+	// Smartfony w przedziale 577–767px (np. większe iPhone'y w portrait)
+	@container newsletter (min-width: 577px) and (max-width: 767px) {
+		&__title {
+			font-size: 2.7rem;
+		}
+
+		&__text {
+			font-size: 1.9rem;
+			line-height: 3rem;
+		}
+	}
+
+	// Galaxy Z Fold 5 w trybie złożonym (front screen ~380–430px szerokości w portrait)
+	// oraz inne wąskie, ale wyższe ekrany smartfonów
+	@container newsletter (max-width: 440px) {
+		&__title {
+			font-size: 2.1rem; // specjalna korekta – tytuł nie za duży na Foldzie złożonym
+			letter-spacing: 0.2rem;
+		}
+
+		&__text {
+			font-size: 1.4rem;
+		}
+	}
+
+	// iPad portrait i większe (≥768px) – lekkie powiększenie
+	@container newsletter (min-width: 768px) {
+		&__title {
+			font-size: 3.2rem;
+			letter-spacing: 0.4rem;
+			padding: 0.8em 2em;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+			line-height: 3.4rem;
+			padding: 0.8em 2em;
+		}
+	}
+
+	// iPad landscape i desktop (≥992px) – powrót do pierwotnego rozmiaru
+	@container newsletter (min-width: 992px) {
+		&__title {
+			font-size: 3rem;
+			letter-spacing: $letter-spacing-1;
+			padding: 0.5em 1em;
+		}
+
+		&__text {
+			font-size: 2rem;
+			line-height: 3rem;
+			padding: 0.5em 1em;
+		}
+	}
+}

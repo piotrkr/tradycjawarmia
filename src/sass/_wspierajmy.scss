@@ -1,0 +1,70 @@
+@use 'variables' as *;
+
+// Kontener dla sekcji .help – to jest kluczowe!
+// Otocz całą sekcję <section class="help"> dodatkową divką z klasą .help-container
+// Dzięki temu container queries będą reagować na rzeczywistą szerokość sekcji (często pełną szerokość strony)
+
+.help-container {
+	container-type: inline-size;
+	container-name: help;
+	width: 100%; // na wypadek, gdyby coś ograniczało szerokość
+}
+
+.help {
+	a {
+		text-decoration: none;
+		color: $white;
+		transition: color 0.3s;
+
+		&:hover {
+			color: #462f20;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		font-family: $font-main-title;
+		letter-spacing: 0.3rem;
+		padding: 1em 1em;
+		background-color: #a70000;
+
+		// Bazowy rozmiar – dla małych ekranów (smartfony)
+		font-size: 2rem;
+	}
+
+	// Container queries z breakpointami Bootstrap
+
+	@container help (min-width: 576px) {
+		&__title {
+			font-size: 2.2rem;
+			padding: 1em 2em;
+		}
+	}
+
+	// iPad portrait i większe tablety – dokładnie to, o co prosiłeś
+	@container help (min-width: 768px) {
+		&__title {
+			font-size: 2.5rem;
+			letter-spacing: 0.3rem;
+			padding: 1em 2em;
+		}
+	}
+
+	// iPad landscape i małe desktopy
+	@container help (min-width: 992px) {
+		&__title {
+			font-size: 3rem;
+			letter-spacing: 0.3rem;
+			padding: 1em 2em;
+		}
+	}
+
+	// Pełny ekran desktop (sekcja full-width lub bardzo szeroki kontener ≥1200px)
+	@container help (min-width: 1200px) {
+		&__title {
+			font-size: 3rem; // duży, dominujący tytuł na dużych monitorach
+			letter-spacing: 0.3rem;
+			padding: 1em 2em;
+		}
+	}
+}

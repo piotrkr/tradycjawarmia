@@ -1,0 +1,123 @@
+@use 'variables' as *;
+
+// Kontener dla sekcji .support – dodaj w HTML klasę .support-container
+// np. <section class="support support-container"> ... </section>
+
+.support-container {
+	container-type: inline-size;
+	container-name: support;
+	width: 100%;
+
+	&:before {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(211, 203, 199, 0.1);
+		content: '';
+		z-index: 0;
+	}
+}
+
+.support {
+	position: relative;
+	background-image: url('/img/swirl.png');
+	background-attachment: fixed;
+	overflow: hidden;
+
+	&__title,
+	&__text {
+		text-align: center;
+	}
+
+	&__title {
+		padding: 0.5em 1em;
+		font-family: $font-main-title;
+		color: #462f20;
+		letter-spacing: $letter-spacing-1;
+
+		// Pierwotny / docelowy rozmiar na pełnym ekranie desktop
+		font-size: 3rem;
+	}
+
+	&__text {
+		font-family: $font-text;
+		font-size: 2rem;
+		padding: 0.5em 1em;
+		color: #462f20;
+		line-height: 3rem;
+
+		span {
+			font-style: italic;
+		}
+	}
+
+	// Container queries – zmniejszamy tylko na mniejszych urządzeniach
+	// Na dużych ekranach (≥1200px, ≥992px itd.) zostaje pierwotny rozmiar
+
+	// Bardzo małe smartfony (iPhone 5/SE ~320px)
+	@container support (max-width: 479px) {
+		&__title {
+			font-size: 2.2rem;
+			padding: 0.6em 1em;
+		}
+
+		&__text {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
+	}
+
+	// Małe i średnie smartfony (do ~576px)
+	@container support (max-width: 576px) {
+		&__title {
+			font-size: 2.5rem;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+		}
+	}
+
+	// Trochę większe smartfony i małe tablety (576–767px)
+	@container support (min-width: 577px) and (max-width: 767px) {
+		&__title {
+			font-size: 2.8rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+	}
+
+	// iPad portrait i większe (≥768px) – delikatne powiększenie, ale nie za dużo
+	@container support (min-width: 768px) {
+		&__title {
+			font-size: 3.2rem; // trochę większy niż bazowy, ładnie wypełnia przestrzeń na iPadzie
+			letter-spacing: 0.4rem;
+			padding: 0.8em 2em;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+			line-height: 3.4rem;
+			padding: 0.8em 2em;
+		}
+	}
+
+	// iPad landscape i desktop (≥992px) – wracamy do pierwotnego/docelowego rozmiaru
+	@container support (min-width: 992px) {
+		&__title {
+			font-size: 3rem; // dokładnie pierwotny rozmiar na pełnym ekranie
+			letter-spacing: $letter-spacing-1;
+			padding: 0.5em 1em;
+		}
+
+		&__text {
+			font-size: 2rem;
+			line-height: 3rem;
+			padding: 0.5em 1em;
+		}
+	}
+}

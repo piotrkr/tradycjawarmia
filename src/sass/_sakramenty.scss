@@ -1,0 +1,146 @@
+@use 'variables' as *;
+
+.img-sacraments {
+	position: relative;
+	height: 70vh;
+	background: url('/img/Procesja-1.jpg');
+	background-position: 25% 60%;
+	background-size: cover;
+	background-attachment: fixed;
+	filter: brightness(0.6);
+}
+
+.sacraments {
+	font-size: 2rem;
+	font-family: $font-main-title;
+
+	&__h4 {
+		font-family: $font-main-title;
+		font-size: 3rem;
+		text-align: center;
+		padding: 1em 2em;
+		letter-spacing: 0.3rem;
+	}
+
+	&__text {
+		font-family: $font-text;
+		font-size: 1.5rem;
+		padding: 1em 2em;
+	}
+
+	&__title {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-family: $font-main-title;
+		font-size: 4rem;
+		color: $white;
+		font-style: italic;
+	}
+
+	&__container {
+		max-height: 100%;
+		width: 100%;
+		background: url('/img/swirl.png');
+		background-attachment: fixed;
+		color: #462f20;
+	}
+}
+
+.accordion {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-bottom: 2em;
+
+	&__header {
+		width: 100%;
+		padding: 1em 2em;
+		text-align: left;
+		background: $bg-color;
+		border: 1px solid $border-color;
+		border-bottom: none;
+		font-family: $font-text;
+		font-size: 1.5rem;
+		color: #462f20;
+		// font-weight: bold;
+		display: flex;
+		align-items: center;
+		transition: $transition;
+		cursor: pointer;
+
+		&:hover {
+			background: #e3dddd;
+		}
+
+		&.active {
+			background: $hover-bg;
+
+			.accordion__icon {
+				transform: rotate(45deg); // + staje się ×
+			}
+		}
+	}
+
+	&__icon {
+		font-size: 1.4rem;
+		font-weight: bold;
+		transition: transform 0.3s ease;
+		margin-right: 20px;
+		width: 30px;
+		text-align: center;
+	}
+
+	&__panel {
+		max-height: 0;
+		overflow: hidden;
+		background: $bg-color;
+		border: 1px solid $border-color;
+		border-top: none;
+		transition: $transition;
+
+		h2,
+		h3,
+		h4 {
+			padding: 1em 2em;
+			font-family: $font-text;
+		}
+
+		h2 {
+			text-align: center;
+		}
+
+		h3,
+		h4 {
+			text-align: left;
+		}
+
+		p {
+			padding: 1em 2em;
+			margin: 0;
+			text-align: justify;
+			line-height: 2rem;
+		}
+
+		&.open {
+			max-height: 100%; // wystarczająco duża wartość, można dostosować lub użyć JS do dynamicznej wysokości
+			:nth-child(2) {
+				font-weight: bold;
+				font-size: 1.1rem;
+			}
+		}
+	}
+
+	// ostatnia pozycja – dolna ramka
+	&__header:last-of-type + &__panel {
+		border-bottom: 1px solid $border-color;
+	}
+
+	&.active {
+		background: $hover-bg;
+
+		.accordion__icon {
+			transform: rotate(45deg);
+		}
+	}
+}
