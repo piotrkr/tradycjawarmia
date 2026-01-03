@@ -1339,6 +1339,7 @@ p {
 @container (min-width:992px) {
 	.sacraments__title {
 		font-size: 4.2rem;
+		text-align: center;
 	}
 	.accordion {
 		max-width: 1200px;
