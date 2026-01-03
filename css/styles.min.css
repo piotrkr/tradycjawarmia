@@ -2794,31 +2794,9 @@ p {
 	background-attachment: fixed;
 	color: #462f20;
 }
-@container (max-width: 575.98px) { 
-	.biznesy {
-		font-size: 1.5rem;
-
-		&__title {
-			font-size: 2.6rem;
-		}
-
-		&__h4 {
-			font-size: 2.2rem;
-			padding: 0.8em 1em;
-			letter-spacing: 0.15rem;
-		}
-
-		&__text {
-			font-size: 1.3rem;
-			padding: 0.8em 1.2em;
-			line-height: 1.5em;
-		}
-	}
-
-	.img-biznesy {
-		height: 50vh;
-		background-attachment: scroll; // lepsza wydajność na mobile
-	}
+.img-biznesy {
+	height: 50vh;
+	background-attachment: scroll;
 }
 .img-chaplain {
 	position: relative;
