@@ -15,6 +15,7 @@
 		background-color: rgba(211, 203, 199, 0.1);
 		content: '';
 		z-index: 0;
+		pointer-events: none;
 	}
 }
 
@@ -49,6 +50,20 @@
 		span {
 			font-style: italic;
 		}
+	}
+
+	&__info,
+	&__link {
+		font-size: 1.3rem;
+	}
+
+	&__info {
+		padding: 0.5em;
+	}
+
+	&__link {
+		padding: 0.5em 1em;
+		font-weight: bold;
 	}
 
 	// Container queries – zmniejszamy tylko na mniejszych urządzeniach
