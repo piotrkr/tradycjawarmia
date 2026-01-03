@@ -14,16 +14,44 @@
 	font-size: 2rem;
 	font-family: $font-main-title;
 
-	&__h4 {
+	&__h4,
+	&__h5,
+	&__h6 {
 		font-family: $font-main-title;
 		font-size: 3rem;
 		text-align: center;
+		padding: 0.5em 1em;
+	}
+
+	&__h5 {
+		font-size: 2rem;
+	}
+
+	&__h6 {
+		text-align: left;
+		font-size: 1.5rem;
 		padding: 1em 2em;
 	}
 
 	&__text {
 		font-family: $font-text;
 		font-size: 1.5rem;
+		padding: 1em 2em;
+		line-height: 1.5em;
+		text-align: left;
+
+		a {
+			text-decoration: none;
+			color: #462f20;
+			font-weight: bold;
+		}
+	}
+
+	&__quote {
+		font-family: $font-text;
+		font-size: 1.2rem;
+		text-align: right;
+		margin-top: 2em;
 		padding: 1em 2em;
 	}
 
