@@ -619,6 +619,11 @@
 	padding: 0.5em 1em;
 	font-weight: 700;
 }
+
+.support__link a {
+	text-decoration: none;
+	color: #462f20;
+}
 @container support (max-width:479px) {
 	.support__title {
 		font-size: 2.2rem;
