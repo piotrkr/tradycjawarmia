@@ -20,6 +20,8 @@
 	background-attachment: fixed;
 	border-radius: 6px;
 	padding: 20px 60px 30px 40px;
+	container-type: inline-size;
+	container-name: contact-container;
 
 	&__title {
 		position: absolute;
@@ -86,61 +88,6 @@
 			}
 		}
 	}
-
-	// &__left-side {
-	// 	width: 100%;/* ograniczenie szerokości dla lepszego wyglądu */
-	// 	margin: 0 auto 60px auto; /* centrowanie + większy odstęp na dole */
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: center;
-	// 	position: relative;
-	// }
-
-	// &__detail {
-	// 	margin: 14px;
-	// 	text-align: center;
-
-	// 	i {
-	// 		font-size: 30px;
-	// 		color: #dbc1a9;
-	// 		margin-bottom: 10px;
-	// 	}
-	// }
-
-	// &__detail-topic {
-	// 	font-size: 18px;
-	// 	font-weight: 500;
-	// 	padding: 0.5em;
-	// }
-
-	// &__detail-text {
-	// 	font-size: 14px;
-	// 	line-height: 1.3rem;
-	// 	color: #afafb6;
-	// 	padding-bottom: 1em;
-
-	// 	span {
-	// 		font-weight: bold;
-	// 	}
-
-	// 	img {
-	// 		width: 400px;
-	// 		height: 400px;
-	// 		background-size: cover;
-	// 	}
-	// }
-
-	// &__detail-topic,
-	// &__detail-text {
-	// 	font-family: $font-text;
-	// 	color: #462f20;
-	// }
-
-	// &__right-side {
-	// 	width: 100%;
-	// 	max-width: 800px; /* formularz nieco szerszy */
-	// 	margin: 0 auto; /* centrowanie */
-	// }
 
 	&__text {
 		font-size: 1.5rem;
@@ -210,11 +157,155 @@
 }
 
 .contact__email-link {
-	color: inherit; /* bierze kolor z rodzica – żeby nie był niebieski/podkreślony */
-	text-decoration: none; /* usuwa podkreślenie */
+	color: inherit;
+	text-decoration: none;
 	transition: opacity 0.3s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
 }
 
-.contact__email-link:hover {
-	opacity: 0.8; /* delikatne przyciemnienie/rozejście przy najechaniu */
+// Container queries – breakpointy Bootstrap
+@container (max-width: 575.98px) { // xs – iPhone 5/SE, iPhone 6/7/8, iPhone X/XS, iPhone 14 Pro Max portrait
+	.contact {
+		padding: 15px 20px;
+
+		&__title {
+			font-size: 2.6rem;
+		}
+
+		&__headline {
+			font-size: 2rem;
+			padding: 0.8em 0;
+			letter-spacing: 0.15rem;
+		}
+
+		&__left-side {
+			flex-direction: column;
+			gap: 2em;
+			margin-bottom: 2em;
+
+			img {
+				width: 100%;
+				max-width: 300px;
+				height: auto;
+				aspect-ratio: 1 / 1;
+			}
+
+			&__church,
+			&__house {
+				p {
+					font-size: 1.3rem;
+				}
+
+				span {
+					font-size: 1.7rem;
+					padding: 0.5em;
+				}
+			}
+		}
+
+		&__text {
+			font-size: 1.3rem;
+		}
+
+		&__input {
+			font-size: 1rem;
+			padding: 0.8em 1.2em;
+		}
+
+		&__submit {
+			font-size: 1rem;
+			padding: 10px 20px;
+		}
+	}
+
+	.img-contact {
+		height: 50vh;
+		background-attachment: scroll;
+	}
+}
+
+@container (min-width: 576px) and (max-width: 767.98px) { // sm – iPhone Plus, Galaxy Z Fold 5 złożony
+	.contact {
+		padding: 20px 30px;
+
+		&__title {
+			font-size: 3.2rem;
+		}
+
+		&__headline {
+			font-size: 2.6rem;
+		}
+
+		&__left-side {
+			flex-direction: column;
+			gap: 3em;
+
+			img {
+				width: 100%;
+				max-width: 380px;
+				height: auto;
+				aspect-ratio: 1 / 1;
+			}
+		}
+
+		&__input {
+			padding: 1em 1.5em;
+		}
+	}
+
+	.img-contact {
+		height: 60vh;
+	}
+}
+
+@container (min-width: 768px) and (max-width: 991.98px) { // md – iPad Mini portrait
+	.contact {
+		padding: 20px 40px;
+
+		&__title {
+			font-size: 3.6rem;
+		}
+
+		&__headline {
+			font-size: 2.8rem;
+		}
+
+		&__left-side {
+			gap: 80px;
+
+			img {
+				width: 380px;
+				height: 380px;
+			}
+		}
+	}
+
+	.img-contact {
+		height: 65vh;
+	}
+}
+
+@container (min-width: 992px) { // lg+ – Galaxy Z Fold 5 rozłożony, desktopy
+	.contact {
+		&__title {
+			font-size: 4.2rem;
+		}
+
+		&__left-side {
+			gap: 160px;
+
+			img {
+				width: 500px;
+				height: 500px;
+			}
+		}
+	}
+
+	.img-contact {
+		height: 70vh;
+		background-attachment: fixed;
+	}
 }
