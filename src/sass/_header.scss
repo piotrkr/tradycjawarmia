@@ -111,26 +111,32 @@
 	color: $white;
 	letter-spacing: $letter-spacing-1;
 
-	@container header (max-width: 576px) {
+	@container (max-width: 576px) {
 		font-size: 1.5rem;
 		letter-spacing: $letter-spacing-1;
 		padding: 0 1em;
 		line-height: 1.3;
 	}
 
-	@container header (max-width: 360px) {
+	@container (max-width: 360px) {
 		font-size: 1.35rem;
 		letter-spacing: 0.08em;
 		line-height: 1.25;
 		padding: 0 0.8em;
 	}
 
-	@container header (min-width: 576px) and (max-width: 768px) {
+	@container (min-width: 576px) and (max-width: 768px) {
 		font-size: 1.7rem;
 	}
 
-	@container header (min-width: 768px) and (max-width: 992px) {
+	@container (min-width: 768px) and (max-width: 992px) {
 		font-size: 1.9rem;
+	}
+
+	@container (min-width: 1200px) and (max-width: 1400px) {
+		.main-title {
+			font-size: 1.8rem;
+		}
 	}
 }
 
