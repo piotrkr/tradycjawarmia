@@ -13,7 +13,7 @@
 	background: url('../img/Msza-rytu-rzymskiego.png');
 	background-size: cover;
 	background-position: 50%;
-	filter: blur(3px);
+	filter: blur(2px);
 }
 .topbar {
 	container-type: inline-size;
