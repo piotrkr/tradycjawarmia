@@ -642,6 +642,9 @@
 		font-size: 1.8rem;
 		line-height: 2.8rem;
 	}
+	.support__link a {
+		word-wrap: break-word;
+	}
 }
 @container support (min-width:577px) and (max-width:767px) {
 	.support__title {
