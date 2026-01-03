@@ -27,6 +27,8 @@
 		background: url('/img/swirl.png');
 		background-attachment: fixed;
 		color: #462f20;
+		container-type: inline-size;
+		container-name: announcements-container;
 	}
 
 	&__h4,
@@ -98,10 +100,11 @@
 
 	.announcements__text {
 		margin: 12px 0;
-		text-align: justify;
+		text-align: left;
 	}
 
-	.announcements__change, .announcements__day {
+	.announcements__change,
+	.announcements__day {
 		font-weight: bold;
 	}
 
@@ -185,5 +188,134 @@
 		background-color: #7d614f;
 		color: white;
 		font-weight: bold;
+	}
+}
+
+// Container queries oparte na breakpointach Bootstrap
+@container announcements-container (max-width: 575.98px) {
+	// xs – iPhone 5/SE, iPhone 6/7/8, iPhone X/XS, iPhone 14 Pro Max portrait
+	.announcements {
+		&__title {
+			font-size: 2.6rem;
+		}
+
+		&__h4 {
+			font-size: 1.7rem;
+			padding: 0.8em 0em;
+		}
+
+		&__subtitle {
+			font-size: 1.3rem;
+			padding-bottom: 0.8em;
+		}
+
+		&__text {
+			font-size: 1.1rem;
+			padding: 0.8em 1em;
+			line-height: 1.4em;
+		}
+	}
+
+	.img-announcements {
+		height: 50vh;
+		background-attachment: scroll; // lepsza wydajność na małych urządzeniach
+	}
+
+	.announcements-container {
+		padding: 15px;
+	}
+
+	.pagination {
+		max-width: 100%;
+		padding: 10px 15px;
+		gap: 6px;
+	}
+
+	.page-number {
+		min-width: 36px;
+		height: 36px;
+		font-size: 1em;
+	}
+}
+
+@container announcements-container (min-width: 576px) and (max-width: 767.98px) {
+	// sm – iPhone Plus, Galaxy Z Fold 5 złożony
+	.announcements {
+		&__title {
+			font-size: 3.2rem;
+		}
+
+		&__h4 {
+			font-size: 1.9rem;
+			padding: 1em 1.5em;
+		}
+
+		&__subtitle {
+			font-size: 1.4rem;
+		}
+
+		&__text {
+			font-size: 1.15rem;
+			padding: 1em 1.5em;
+		}
+	}
+
+	.img-announcements {
+		height: 60vh;
+	}
+
+	.announcements-container {
+		padding: 18px;
+	}
+
+	.pagination {
+		max-width: 500px;
+	}
+}
+
+@container (max-width: 768px) {
+	.announcements {
+		&__title {
+			font-size: 2.2rem;
+		}
+	}
+}
+
+@container (min-width: 768px) and (max-width: 991.98px) {
+	// md – iPad Mini portrait
+	.announcements {
+		&__title {
+			font-size: 3.6rem;
+		}
+
+		&__h4 {
+			font-size: 2.1rem;
+		}
+
+		&__text {
+			font-size: 1.2rem;
+		}
+	}
+
+	.img-announcements {
+		height: 65vh;
+	}
+}
+
+@container (min-width: 992px) {
+	// lg+ – Galaxy Z Fold 5 rozłożony, desktopy
+	.announcements {
+		&__title {
+			font-size: 4.2rem;
+		}
+	}
+
+	.img-announcements {
+		height: 70vh;
+		background-attachment: fixed;
+	}
+
+	.announcements-container {
+		width: 1200px; // przywracamy oryginalną szerokość na dużych kontenerach
 	}
 }
