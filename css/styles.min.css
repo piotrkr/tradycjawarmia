@@ -633,7 +633,7 @@
 		font-size: 1.6rem;
 		line-height: 2.4rem;
 	}
-}
+}s
 @container support (max-width:576px) {
 	.support__title {
 		font-size: 2.5rem;
