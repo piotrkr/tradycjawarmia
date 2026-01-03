@@ -2793,6 +2793,88 @@ p {
 	background-attachment: fixed;
 	color: #462f20;
 }
+@container (max-width: 575.98px) {
+  .biznesy {
+    font-size: 1.5rem;
+  }
+
+  .biznesy__title {
+    font-size: 3rem;
+	text-align: center;
+  }
+
+  .biznesy__h4 {
+    font-size: 2.5rem;
+    padding: 0.8em 0;
+    letter-spacing: 0.15rem;
+  }
+
+  .biznesy__text {
+    font-size: 1.3rem;
+    padding: 0.8em 1.2em;
+    line-height: 1.5em;
+  }
+
+  .img-biznesy {
+    height: 50vh;
+    background-attachment: scroll;
+  }
+}
+/* sm – 576px do 767.98px */
+@container (min-width: 576px) and (max-width: 767.98px) {
+  .biznesy__title {
+    font-size: 3rem;
+  }
+
+  .biznesy__h4 {
+    font-size: 2rem;
+    padding: 1em 1.5em;
+  }
+
+  .biznesy__text {
+    font-size: 1.4rem;
+    padding: 1em 1.5em;
+  }
+
+  .img-biznesy {
+    height: 60vh;
+  }
+}
+
+/* md – 768px do 991.98px */
+@container (min-width: 768px) and (max-width: 991.98px) {
+  .biznesy {
+    font-size: 1.8rem;
+  }
+
+  .biznesy__title {
+    font-size: 3.6rem;
+  }
+
+  .biznesy__h4 {
+    font-size: 2.8rem;
+  }
+
+  .biznesy__text {
+    font-size: 1.45rem;
+  }
+
+  .img-biznesy {
+    height: 65vh;
+  }
+}
+
+/* lg+ – od 992px */
+@container (min-width: 992px) {
+  .biznesy__title {
+    font-size: 4.2rem;
+  }
+
+  .img-biznesy {
+    height: 70vh;
+    background-attachment: fixed;
+  }
+}
 .img-chaplain {
 	position: relative;
 	height: 70vh;
