@@ -2822,13 +2822,16 @@ p {
 }
 @container (min-width:1200px) {
 	.schola__photo {
-		width: 70vh;
+		/* width: 70vh; */
 		transform: translate(80%);
 	}
 }
 @container (1200px <= width <= 1400px) {
 	.schola__title {
 		font-size: 3.5rem;
+	}
+	.schola__photo {
+		transform: translate(100%);
 	}
 }
 .img-trident {
