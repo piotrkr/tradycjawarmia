@@ -129,9 +129,9 @@
 		font-size: 1.9rem;
 	}
 }
-@container (min-width:1200px) and (max-width:1400px) {
+@container header (min-width:1200px) and (max-width:1400px) {
 	.main-title {
-		font-size: 2.2rem;
+		font-size: 2rem;
 	}
 }
 @container (min-width:1400px) {
