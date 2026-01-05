@@ -191,6 +191,7 @@
 	list-style: none;
 	opacity: 0;
 	transition: opacity 0.5s ease;
+	z-index: 1;
 }
 .navbar__list__first:hover .navbar__list__add {
 	opacity: 1;
@@ -218,6 +219,7 @@
 	list-style: none;
 	opacity: 0;
 	transition: opacity 0.5s ease;
+	z-index: 1;
 }
 .navbar__list__third:hover .navbar__list__add {
 	opacity: 1;
