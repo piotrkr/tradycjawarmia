@@ -492,7 +492,16 @@
 .logo-white:hover {
 	transform: scale(1.15);
 }
-@container header (max-width:768px) {
+@container (max-width:768px) {
+	.logo-white {
+		height: 110px;
+		width: 110px;
+		bottom: 20%;
+		right: 20%;
+	}
+}
+
+@container (min-width:992px) and (max-width: 1200px) {
 	.logo-white {
 		height: 110px;
 		width: 110px;
