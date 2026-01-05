@@ -5,7 +5,6 @@
 	position: relative;
 	min-height: 100%;
 	overflow: hidden;
-	width: 100%;
 	max-width: none;
 }
 .img-cover {
@@ -133,7 +132,7 @@
 }
 @container (min-width: 992px) and (max-width: 1200px) {
 	.main-title {
-		font-size: 1.8rem;
+		font-size: 2rem;
 	}
 }
 @container (min-width: 1200px) {
@@ -492,16 +491,7 @@
 .logo-white:hover {
 	transform: scale(1.15);
 }
-@container (max-width:768px) {
-	.logo-white {
-		height: 110px;
-		width: 110px;
-		bottom: 20%;
-		right: 20%;
-	}
-}
-
-@container (min-width:992px) and (max-width: 1200px) {
+@container header (max-width:768px) {
 	.logo-white {
 		height: 110px;
 		width: 110px;
