@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .header {
 	container-type: inline-size;
-	container-name: header;
+	/* container-name: header; */
 	position: relative;
 	min-height: 100%;
 	overflow: hidden;
