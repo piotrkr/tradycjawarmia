@@ -10,7 +10,7 @@
 .img-cover {
 	position: relative;
 	height: 100dvh;
-	width: 100%;
+	width: auto;
 	background: url('../img/Msza-rytu-rzymskiego.png');
 	background-size: cover;
 	background-position: 50%;
@@ -103,6 +103,7 @@
 	font-size: 2.5rem; /* fallback dla bardzo starych przeglądarek bez wsparcia container queries */
 	line-height: 1.2;
 	margin: 0;
+	width: auto;
 	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
 	font-weight: 700;
 }
