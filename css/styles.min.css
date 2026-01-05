@@ -97,7 +97,7 @@
 	color: #fff;
 	letter-spacing: 0.3rem;
 }
-@container header (max-width:576px) {
+@container (max-width:576px) {
 	.main-title {
 		font-size: 1.5rem;
 		letter-spacing: 0.25rem;
@@ -106,7 +106,7 @@
 	}
 }
 
-@container header (max-width:360px) {
+@container (max-width:360px) {
 	.main-title {
 		font-size: 1.3rem;
 		letter-spacing: 0.05rem;
@@ -115,19 +115,19 @@
 	}
 }
 
-@container header (min-width:576px) and (max-width:768px) {
+@container (min-width:576px) and (max-width:768px) {
 	.main-title {
 		font-size: 1.75rem;
 	}
 }
 
-@container header (min-width:768px) and (max-width:992px) {
+@container (min-width:768px) and (max-width:992px) {
 	.main-title {
 		font-size: 1.9rem;
 	}
 }
 
-@container header (min-width:992px) and (max-width:1400px) {
+@container (min-width:992px) and (max-width:1400px) {
 	.main-title {
 		font-size: 2rem;
 	}
