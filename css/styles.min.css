@@ -2831,7 +2831,7 @@ p {
 		font-size: 3.5rem;
 	}
 	.schola__photo {
-		transform: translate(100%);
+		transform: translate(105%);
 	}
 }
 .img-trident {
@@ -3820,7 +3820,7 @@ p {
 	}
 	.school__photo {
 		width: 100vh;
-		transform: translate(50%);
+		transform: translate(60%);
 	}
 }
 * {
