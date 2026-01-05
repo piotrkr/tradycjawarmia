@@ -13,7 +13,7 @@
 	background: url(/img/Msza-rytu-rzymskiego.png);
 	background-size: cover;
 	background-position: 50%;
-	filter: blur(3px);
+	filter: blur(2px);
 }
 .topbar {
 	container-type: inline-size;
@@ -2793,10 +2793,6 @@ p {
 	background: url(/img/swirl.png);
 	background-attachment: fixed;
 	color: #462f20;
-}
-.img-biznesy {
-	height: 50vh;
-	background-attachment: scroll;
 }
 
 @container (max-width: 575.98px) {
