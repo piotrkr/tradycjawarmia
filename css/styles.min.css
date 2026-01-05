@@ -130,8 +130,8 @@
 	}
 }
 @container (min-width:1200px) and (max-width:1400px) {
-	.main-title .main-title {
-		font-size: 1.8rem;
+	.main-title {
+		font-size: 2rem;
 	}
 }
 .navbar {
