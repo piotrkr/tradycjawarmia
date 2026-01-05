@@ -166,6 +166,13 @@
 		display: none;
 	}
 }
+
+@container (min-width:1200px) and (max-width:1400px) {
+	.navbar {
+		width: auto;
+		font-size: 1.2rem;
+	}
+}
 .navbar__list {
 	position: absolute;
 	display: flex;
