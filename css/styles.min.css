@@ -3684,6 +3684,8 @@ p {
 .school__photo {
 	width: 100vh;
 	background-size: cover;
+	left: 50%;
+	transform: translateX(-50%);
 	/* background-position: 50%; */
 	border: 1px solid #462f20;
 	border-radius: 12px;
@@ -3820,7 +3822,8 @@ p {
 	}
 	.school__photo {
 		width: 100vh;
-		transform: translate(60%);
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
 * {
