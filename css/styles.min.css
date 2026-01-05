@@ -7,8 +7,8 @@
 	overflow: hidden;
 	width: 100%;
 	display: flex; /* dodajemy flex dla lepszego centrania zawartości */
-	flex-direction: column;
-	justify-content: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .img-cover {
 	position: relative;
@@ -102,89 +102,103 @@
 	letter-spacing: 0.3rem;
 	pointer-events: none;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2rem; /* odstęp między tytułem a przyciskiem */
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* odstęp między tytułem a przyciskiem */
 }
 
 .main-title h1 {
-	font-size: 2.2rem; /* fallback dla bardzo starych przeglądarek bez wsparcia container queries */
-	line-height: 1.1;
-	margin: 0;
-	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-	font-weight: 700;
+    font-size: 2.2rem; /* fallback dla bardzo starych przeglądarek bez wsparcia container queries */
+    line-height: 1.2em;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    font-weight: 700;
 }
 
 .main-title .navbar__button {
-	/* dostosuj selektor jeśli inny */
-	pointer-events: all; /* żeby był klikalny */
-	padding: 1em 2em;
-	font-size: 1.3rem;
-	margin-top: 5rem; /* dodatkowy odstęp jeśli potrzeba */
+    pointer-events: all;
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    background-color: #a70000;
+    color: white;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 @container header (max-width: 575.98px) {
-	.main-title h1 {
-		font-size: 1.8rem;
-	}
+    .main-title h1 {
+        font-size: 2.2rem;
+    }
+    .main-title .navbar__button {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.8rem;
+    }
 }
 
 @container header (min-width: 576px) {
-	.main-title h1 {
-		font-size: 2.4rem;
-	}
+    .main-title h1 {
+        font-size: 2.8rem;
+    }
 }
 
 @container header (min-width: 768px) {
-	.main-title h1 {
-		font-size: 3rem;
-	}
+    .main-title h1 {
+        font-size: 3.4rem;
+    }
 }
 
 @container header (min-width: 992px) {
-	.main-title h1 {
-		font-size: 3.6rem; /* zmniejszone z 4.5rem – lepsze na laptopach */
-	}
+    .main-title h1 {
+        font-size: 4rem;     /* już nie 4.5+ – lepiej na laptopach */
+    }
 }
 
 @container header (min-width: 1200px) {
-	.main-title h1 {
-		font-size: 4.2rem; /* zmniejszone */
-	}
+    .main-title h1 {
+        font-size: 4.6rem;
+    }
 }
 
 @container header (min-width: 1400px) {
-	.main-title h1 {
-		font-size: 4.8rem; /* maksymalny rozmiar */
-	}
+    .main-title h1 {
+        font-size: 5.2rem;   /* maksymalny rozmiar dopiero na dużych monitorach */
+    }
 }
 
-/* ==================== DODATKOWE MEDIA QUERIES NA ŚREDNIE EKRANY ==================== */
-/* Na mniejszych laptopach (np. 1100-1400px) lekko przesuwamy w górę, żeby nie nakładało się na menu */
+/* Dodatkowe przesunięcie na średnich i małych ekranach – unikamy nakładania na menu */
 @media (max-width: 1199.98px) {
-	.main-title {
-		top: 55%; /* lekkie przesunięcie w dół, żeby uniknąć nakładania na navbar */
-		transform: translate(-50%, -55%);
-	}
+    .main-title {
+        top: 55%;
+        transform: translate(-50%, -55%);
+    }
 }
 
-/* Na bardzo małych laptopach/tabletach poziomo */
 @media (max-width: 991.98px) {
-	.main-title {
-		top: 60%;
-		transform: translate(-50%, -60%);
-	}
+    .main-title {
+        top: 58%;
+        transform: translate(-50%, -58%);
+    }
 }
 
-/* Dodatkowa ochrona przed przepełnieniem */
-.main-title h1 br {
-	display: none; /* opcjonalnie: usuń <br> na małych ekranach i pozwól na naturalne łamanie */
+@media (max-width: 767.98px) {
+    .main-title {
+        top: 60%;
+        transform: translate(-50%, -60%);
+    }
 }
 
-@media (min-width: 768px) {
-	.main-title h1 br {
-		display: inline; /* przywróć na większych */
-	}
+/* Opcjonalnie: usuń <br> w tytule na małych ekranach – tekst sam się ładnie złamie */
+@media (max-width: 767.98px) {
+    .main-title h1 br {
+        display: none;
+    }
+}
+
+.navbar__list .logo-white {
+    height: 80px; /* baza */
+    width: auto;
+    transition: height 0.3s;
 }
 
 .navbar {
@@ -310,14 +324,14 @@
 @container header (max-width:576px) {
 	.navbar__button {
 		font-size: 1.1rem;
-		padding: 0.9em 1.7em;
+		padding: 0.8em 1.5em;
 		margin-top: 1em;
 	}
 }
 @container header (max-width:360px) {
 	.navbar__button {
-		font-size: 1rem;
-		padding: 0.8em 1.5em;
+		font-size: .8rem;
+		padding: 0.6em 1.3em;
 		letter-spacing: 0.15em;
 		margin-top: 0.8em;
 	}
