@@ -137,13 +137,13 @@
 /* Duże ekrany – lg i wyżej */
 @container (min-width: 992px) {
 	.main-title h1 {
-		font-size: 4rem;
+		font-size: 3.6rem;
 	}
 }
 
 @container (min-width: 1200px) {
 	.main-title h1 {
-		font-size: 4.5rem;
+		font-size: 4rem;
 	}
 }
 
