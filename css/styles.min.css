@@ -263,7 +263,7 @@
 }
 
 @container (1200px <= width <= 1400px) {
-	.navbar__list__first .navbar__list__add {
+	.navbar__list__add li {
 		font-size: 1rem;
 	}
 }
