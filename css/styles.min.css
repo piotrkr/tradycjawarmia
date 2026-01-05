@@ -159,6 +159,7 @@
 	font-weight: 700;
 	font-size: 1.4rem;
 	justify-content: space-between;
+	width: auto;
 }
 @container (max-width:1200px) {
 	.navbar {
@@ -194,6 +195,7 @@
 .navbar__list__third,
 .navbar__list li {
 	position: relative;
+	width: auto;
 }
 .navbar__list__first .navbar__list__add {
 	position: absolute;
