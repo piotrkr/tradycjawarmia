@@ -3,9 +3,12 @@
 	container-type: inline-size;
 	container-name: header;
 	position: relative;
-	min-height: 100%;
+	min-height: 100vh;
 	overflow: hidden;
 	width: 100%;
+	display: flex; /* dodajemy flex dla lepszego centrania zawartości */
+	flex-direction: column;
+	justify-content: center;
 }
 .img-cover {
 	position: relative;
@@ -87,9 +90,10 @@
 }
 .main-title {
 	position: absolute;
-	width: 100%;
+	width: 90%;
 	top: 50%;
 	left: 50%;
+	max-width: 1400px;
 	transform: translate(-50%, -50%);
 	text-align: center;
 	font-size: 2.2rem;
@@ -97,64 +101,89 @@
 	color: #fff;
 	letter-spacing: 0.3rem;
 	pointer-events: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem; /* odstęp między tytułem a przyciskiem */
 }
 
 .main-title h1 {
-    font-size: 2.5rem; /* fallback dla bardzo starych przeglądarek bez wsparcia container queries */
-    line-height: 1.2;
-    margin: 0;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-    font-weight: 700;
+	font-size: 2.2rem; /* fallback dla bardzo starych przeglądarek bez wsparcia container queries */
+	line-height: 1.1;
+	margin: 0;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+	font-weight: 700;
 }
 
-@container (max-width: 500px) {
+.main-title .navbar__button {
+	/* dostosuj selektor jeśli inny */
+	pointer-events: all; /* żeby był klikalny */
+	padding: 1em 2em;
+	font-size: 1.3rem;
+	margin-top: 5rem; /* dodatkowy odstęp jeśli potrzeba */
+}
+
+@container header (max-width: 575.98px) {
 	.main-title h1 {
 		font-size: 1.8rem;
 	}
 }
 
-/* Małe ekrany – do ok. 576px (odpowiednik Bootstrap sm) */
-@container (max-width: 576px) {
+@container header (min-width: 576px) {
 	.main-title h1 {
-		font-size: 2rem;
+		font-size: 2.4rem;
 	}
 }
 
-/* Średnie ekrany – od md do lg (768–991px) */
-@container (min-width: 577px) {
+@container header (min-width: 768px) {
 	.main-title h1 {
-		font-size: 2.8rem;
+		font-size: 3rem;
 	}
 }
 
-@container (min-width: 768px) {
+@container header (min-width: 992px) {
 	.main-title h1 {
-		font-size: 3.2rem;
+		font-size: 3.6rem; /* zmniejszone z 4.5rem – lepsze na laptopach */
 	}
 }
 
-/* Duże ekrany – lg i wyżej */
-@container (min-width: 992px) {
+@container header (min-width: 1200px) {
 	.main-title h1 {
-		font-size: 4rem;
+		font-size: 4.2rem; /* zmniejszone */
 	}
 }
 
-@container (min-width: 1200px) {
+@container header (min-width: 1400px) {
 	.main-title h1 {
-		font-size: 4.5rem;
+		font-size: 4.8rem; /* maksymalny rozmiar */
 	}
 }
 
-@container (min-width: 1400px) {
-	.main-title h1 {
-		font-size: 5rem;
-	}
-}
-
-@media (max-width: 576px) {
+/* ==================== DODATKOWE MEDIA QUERIES NA ŚREDNIE EKRANY ==================== */
+/* Na mniejszych laptopach (np. 1100-1400px) lekko przesuwamy w górę, żeby nie nakładało się na menu */
+@media (max-width: 1199.98px) {
 	.main-title {
-		top: 60%; /* przesuń niżej, gdy topbar + navbar zajmują więcej miejsca */
+		top: 55%; /* lekkie przesunięcie w dół, żeby uniknąć nakładania na navbar */
+		transform: translate(-50%, -55%);
+	}
+}
+
+/* Na bardzo małych laptopach/tabletach poziomo */
+@media (max-width: 991.98px) {
+	.main-title {
+		top: 60%;
+		transform: translate(-50%, -60%);
+	}
+}
+
+/* Dodatkowa ochrona przed przepełnieniem */
+.main-title h1 br {
+	display: none; /* opcjonalnie: usuń <br> na małych ekranach i pozwól na naturalne łamanie */
+}
+
+@media (min-width: 768px) {
+	.main-title h1 br {
+		display: inline; /* przywróć na większych */
 	}
 }
 
