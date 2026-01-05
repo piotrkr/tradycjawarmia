@@ -10,7 +10,7 @@
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	background: url(/img/Msza-rytu-rzymskiego.png);
+	background: url('../img/Msza-rytu-rzymskiego.png');
 	background-size: cover;
 	background-position: 50%;
 	filter: blur(2px);
@@ -461,7 +461,7 @@
 	position: relative;
 	height: 200px;
 	background-color: #f5ebe0;
-	background-image: url(/img/swirl.png);
+	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
 	overflow: hidden;
 }
@@ -524,7 +524,7 @@
 	container-type: inline-size;
 	width: 100%;
 	height: 100%;
-	background-image: url(/img/swirl.png);
+	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
 	overflow: hidden;
 }
@@ -583,7 +583,7 @@
 }
 .support {
 	position: relative;
-	background-image: url(/img/swirl.png);
+	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
 	overflow: hidden;
 }
@@ -619,7 +619,6 @@
 	padding: 0.5em 1em;
 	font-weight: 700;
 }
-
 .support__link a {
 	text-decoration: none;
 	color: #462f20;
@@ -682,7 +681,7 @@
 .img-aboutus {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Spowiedź-1.jpg);
+	background: url('../img/Spowiedź-1.jpg');
 	background-position: 50%;
 	background-attachment: fixed;
 	filter: brightness(0.6);
@@ -694,7 +693,7 @@
 .aboutus__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 	container-type: inline-size;
@@ -852,7 +851,7 @@
 }
 .news-section {
 	position: relative;
-	background-image: url(/img/swirl.png);
+	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
 	padding-bottom: 2em;
 	cursor: pointer;
@@ -1038,7 +1037,7 @@
 }
 .article-section {
 	padding: 80px 20px;
-	background-image: url(/img/swirl.png);
+	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 	overflow: hidden;
@@ -1124,7 +1123,7 @@ p {
 .img-sacraments {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Procesja-1.jpg);
+	background: url('../img/Procesja-1.jpg');
 	background-position: 25% 60%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -1164,7 +1163,7 @@ p {
 .sacraments__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 	container-type: inline-size;
@@ -1340,6 +1339,7 @@ p {
 @container (min-width:992px) {
 	.sacraments__title {
 		font-size: 4.2rem;
+		text-align: center;
 	}
 	.accordion {
 		max-width: 1200px;
@@ -1359,7 +1359,7 @@ p {
 	position: relative;
 	font-family: Cinzel Decorative, serif;
 	background-color: #f5ebe0;
-	background-image: url(/img/swirl.png);
+	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
 	overflow: hidden;
 	padding-bottom: 2em;
@@ -1622,7 +1622,7 @@ p {
 }
 .newsletter {
 	position: relative;
-	background-image: url(/img/swirl.png);
+	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
 	overflow: hidden;
 }
@@ -1716,7 +1716,7 @@ p {
 	min-height: 450px;
 	height: auto;
 	background-color: #f5ebe0;
-	background-image: url(/img/swirl.png);
+	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
 	overflow: hidden;
 	display: flex;
@@ -1987,7 +1987,7 @@ p {
 .img-contact {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Pisma.jpg);
+	background: url('../img/Pisma.jpg');
 	background-position: bottom;
 	background-size: cover;
 	background-attachment: fixed;
@@ -1995,7 +1995,7 @@ p {
 }
 .contact {
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	border-radius: 6px;
 	padding: 20px 60px 30px 40px;
@@ -2237,7 +2237,7 @@ p {
 .img-announcements {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Modlitwa-1.jpg);
+	background: url('../img/Modlitwa-1.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -2255,7 +2255,7 @@ p {
 .announcements__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 	container-type: inline-size;
@@ -2491,7 +2491,7 @@ p {
 .img-rosary {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Spowiedź-1.jpg);
+	background: url('../img/Spowiedź-1.jpg');
 	background-position: 50%;
 	background-attachment: fixed;
 	filter: brightness(0.6);
@@ -2526,7 +2526,7 @@ p {
 .rosary__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
@@ -2537,7 +2537,7 @@ p {
 .schola__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 	container-type: inline-size;
@@ -2597,7 +2597,7 @@ p {
 .img-schola {
 	position: relative;
 	height: 70vh;
-	background: url(/img/chór.jpg);
+	background: url('../img/chór.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -2723,7 +2723,7 @@ p {
 .img-trident {
 	position: relative;
 	height: 70vh;
-	background: url(/img/latin.jpg);
+	background: url('../img/latin.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -2748,14 +2748,14 @@ p {
 .trident__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-biznesy {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Spowiedź-1.jpg);
+	background: url('../img/Spowiedź-1.jpg');
 	background-position: 50%;
 	background-attachment: fixed;
 	filter: brightness(0.6);
@@ -2790,18 +2790,17 @@ p {
 .biznesy__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
-
 @container (max-width: 575.98px) {
   .biznesy {
     font-size: 1.5rem;
   }
 
   .biznesy__title {
-    font-size: 3rem;
+    font-size: 2.8rem;
 	text-align: center;
   }
 
@@ -2877,11 +2876,10 @@ p {
     background-attachment: fixed;
   }
 }
-
 .img-chaplain {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Msza-1.jpg);
+	background: url('../img/Msza-1.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -2910,7 +2908,7 @@ p {
 	container-name: chaplain-content;
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
@@ -2975,7 +2973,7 @@ p {
 .img-parish {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Porządki.jpg);
+	background: url('../img/Porządki.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3000,14 +2998,14 @@ p {
 .parish__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-novenas {
 	position: relative;
 	height: 70vh;
-	background: url(/img/modlitwa-4.jpg);
+	background: url('../img/modlitwa-4.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3043,14 +3041,14 @@ p {
 .novenas__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-community {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Porządki.jpg);
+	background: url('../img/Porządki.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3075,7 +3073,7 @@ p {
 .community__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
@@ -3089,7 +3087,7 @@ p {
 .img-baptism {
 	position: relative;
 	height: 70vh;
-	background: url(/img/chrzest-4.jpg);
+	background: url('../img/chrzest-4.jpg');
 	background-position: center 25%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3125,14 +3123,14 @@ p {
 .baptism__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-confirmation {
 	position: relative;
 	height: 70vh;
-	background: url(/img/bierzmowanie-1.jpg);
+	background: url('../img/bierzmowanie-1.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3168,14 +3166,14 @@ p {
 .confirmation__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-eucharist {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Eucharystia-2.jpg);
+	background: url('../img/Eucharystia-2.jpg');
 	background-position: bottom;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3211,14 +3209,14 @@ p {
 .eucharist__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-confess {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Spowiedź-1.jpg);
+	background: url('../img/Spowiedź-1.jpg');
 	background-position: 50%;
 	background-attachment: fixed;
 	filter: brightness(0.6);
@@ -3253,14 +3251,14 @@ p {
 .confess__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-anointing {
 	position: relative;
 	height: 70vh;
-	background: url(/img/namaszczenie-2.jpg);
+	background: url('../img/namaszczenie-2.jpg');
 	background-position: 50%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3296,14 +3294,14 @@ p {
 .anointing__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-priesthood {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Najświętszy-Sakrament.jpg);
+	background: url('../img/Najświętszy-Sakrament.jpg');
 	background-position: 50% 40%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3339,14 +3337,14 @@ p {
 .priesthood__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
 .img-marriage {
 	position: relative;
 	height: 70vh;
-	background: url(/img/Małżeństwo.jpg);
+	background: url('../img/Małżeństwo.jpg');
 	background-position: 25% 80%;
 	background-size: cover;
 	background-attachment: fixed;
@@ -3382,7 +3380,7 @@ p {
 .marriage__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 }
@@ -3444,7 +3442,7 @@ p {
 .img-school {
 	position: relative;
 	height: 70vh;
-	background: url(/img/school.jpg);
+	background: url('../img/school.jpg');
 	background-position: bottom;
 	background-size: cover;
 	filter: brightness(0.6);
@@ -3468,7 +3466,7 @@ p {
 .school__container {
 	max-height: 100%;
 	width: 100%;
-	background: url(/img/swirl.png);
+	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
 	container-type: inline-size;
@@ -3524,8 +3522,8 @@ p {
 		font-size: 2.6rem;
 	}
 	.school__container h4 {
-		font-size: 2rem;
-		padding: 0.8em 0;
+		font-size: 1.8rem;
+		padding: 1em 1em;
 		letter-spacing: 0.15rem;
 	}
 	.school__photo {
