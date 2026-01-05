@@ -822,7 +822,6 @@
 	font-family: Cinzel Decorative, serif;
 	font-size: 4rem;
 	color: #fff;
-	font-style: italic;
 }
 @container aboutus-container (max-width:575.98px) {
 	.aboutus {
@@ -922,6 +921,12 @@
 	.img-aboutus {
 		height: 70vh;
 		background-attachment: fixed;
+	}
+}
+
+@container (1200px <= width <= 1400px) {
+	.aboutus__title {
+		font-size: 3.5rem;
 	}
 }
 .news-container {
