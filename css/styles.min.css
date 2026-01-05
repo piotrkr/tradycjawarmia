@@ -1,11 +1,9 @@
 @charset "UTF-8";
 .header {
 	container-type: inline-size;
-	/* container-name: header; */
 	position: relative;
 	min-height: 100%;
 	overflow: hidden;
-	max-width: none;
 }
 .img-cover {
 	position: relative;
