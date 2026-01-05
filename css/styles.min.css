@@ -2331,6 +2331,11 @@ p {
 	font-size: 4rem;
 	color: #fff;
 }
+@container (1200px <= width <= 1400px) {
+	.announcements__title {
+		font-size: 3.5rem;
+	}
+}
 .announcements__container {
 	max-height: 100%;
 	width: 100%;
