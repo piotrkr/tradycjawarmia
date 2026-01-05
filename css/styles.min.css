@@ -5,7 +5,7 @@
 	position: relative;
 	min-height: 100%;
 	overflow: hidden;
-	width: 100%;
+	width: auto;
 }
 .img-cover {
 	position: relative;
