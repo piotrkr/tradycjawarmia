@@ -535,6 +535,13 @@
 		right: 20%;
 	}
 }
+
+@container (1200px <= width <= 1400px) {
+	.logo-white {
+		height: 120px;
+		width: 120px;
+	}
+}
 .announcements {
 	container-type: inline-size;
 	position: relative;
