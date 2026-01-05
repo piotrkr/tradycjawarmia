@@ -167,12 +167,19 @@
 	}
 }
 
-@container (min-width:1200px) and (max-width:1400px) {
+@container (min-width:1200px) {
 	.navbar {
 		width: auto;
 		font-size: 1.2rem;
 	}
 }
+
+@container (min-width:1400px) {
+	.navbar {
+		font-size: 1.4rem;
+	}
+}
+
 .navbar__list {
 	position: absolute;
 	display: flex;
@@ -282,19 +289,24 @@
 .navbar__button:hover {
 	background-color: #b08968;
 }
-@container header (max-width:576px) {
+@container (max-width:576px) {
 	.navbar__button {
 		font-size: 1.1rem;
 		padding: 0.9em 1.7em;
 		margin-top: 1em;
 	}
 }
-@container header (max-width:360px) {
+@container (max-width:360px) {
 	.navbar__button {
 		font-size: 1rem;
 		padding: 0.8em 1.5em;
 		letter-spacing: 0.15em;
 		margin-top: 0.8em;
+	}
+}
+@container (min-width:1200px) and (max-width:1400px) {
+	.navbar__button {
+		font-size: 1rem;
 	}
 }
 .hamburger__menu {
