@@ -3684,10 +3684,10 @@ p {
 .school__photo {
 	width: 100vh;
 	background-size: cover;
-	background-position: 50%;
+	/* background-position: 50%; */
 	border: 1px solid #462f20;
 	border-radius: 12px;
-	transform: translate(44%);
+	/* transform: translate(50%); */
 	margin-top: 2em;
 }
 .school__text {
@@ -3817,6 +3817,10 @@ p {
 @container (1200px <= width <= 1400px) {
 	.school__title {
 		font-size: 3.5rem;
+	}
+	.school__photo {
+		width: 100vh;
+		transform: translate(50%);
 	}
 }
 * {
