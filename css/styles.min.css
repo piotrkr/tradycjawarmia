@@ -174,12 +174,6 @@
 	}
 }
 
-/* @container (min-width:1400px) {
-	.navbar {
-		font-size: 1.4rem;
-	}
-} */
-
 .navbar__list {
 	position: absolute;
 	display: flex;
@@ -268,14 +262,9 @@
 	background-color: #d7ccc1;
 }
 
-@container (min-width: 1200px) {
-	.navbar__list__add {
+@container (1200px <= width <= 1400px) {
+	.navbar__list__first .navbar__list__add {
 		font-size: 1rem;
-	}
-}
-@container (min-width: 1400px) {
-	.navbar__list__add {
-		font-size: 1.2rem;
 	}
 }
 .navbar__button {
