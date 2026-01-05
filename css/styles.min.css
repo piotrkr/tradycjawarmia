@@ -167,18 +167,18 @@
 	}
 }
 
-@container (min-width:1200px) {
+@container (1200px <= width <= 1400px) {
 	.navbar {
 		width: auto;
 		font-size: 1.2rem;
 	}
 }
 
-@container (min-width:1400px) {
+/* @container (min-width:1400px) {
 	.navbar {
 		font-size: 1.4rem;
 	}
-}
+} */
 
 .navbar__list {
 	position: absolute;
