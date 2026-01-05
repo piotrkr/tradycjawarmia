@@ -248,6 +248,7 @@
 	.navbar__button {
 		font-size: 1.1rem;
 		padding: 0.9em 1.7em;
+		margin-top: 1em;
 	}
 }
 @container header (max-width:360px) {
@@ -255,6 +256,7 @@
 		font-size: 1rem;
 		padding: 0.8em 1.5em;
 		letter-spacing: 0.15em;
+		margin-top: 0.8em;
 	}
 }
 .hamburger__menu {
@@ -361,9 +363,9 @@
 }
 @container header (max-width:360px) {
 	.off__screen__logo .img {
-		width: 100px;
-		height: 100px;
-		top: 0.8em;
+		width: 115px;
+		height: 115px;
+		top: 0.5em;
 	}
 }
 .off__screen__menu {
@@ -435,6 +437,33 @@
 .off__screen.active {
 	right: 0;
 }
+.off__screen__add {
+	display: none;
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	font-size: 1.4rem;
+	/* padding-left: 20px; */
+	margin-top: 0;
+	margin-bottom: 0;
+	list-style: none;
+	transition: all 0.3s; /* delikatna animacja */
+	transform: translateY(-10px);
+}
+
+.off__screen__add.active {
+	display: block;
+	opacity: 1;
+	max-height: 300px; /* wystarczająco dużo na wszystkie pozycje */
+	margin-top: .3em;
+	transform: translateY(0);
+	padding-top: 0.2em;
+}
+
+.off__screen__add.active a {
+	padding: 0.2em;
+}
+
 .logo-white {
 	position: relative;
 	display: flex;
@@ -2795,86 +2824,86 @@ p {
 	color: #462f20;
 }
 @container (max-width: 575.98px) {
-  .biznesy {
-    font-size: 1.5rem;
-  }
+	.biznesy {
+		font-size: 1.5rem;
+	}
 
-  .biznesy__title {
-    font-size: 2.8rem;
-	text-align: center;
-  }
+	.biznesy__title {
+		font-size: 2.8rem;
+		text-align: center;
+	}
 
-  .biznesy__h4 {
-    font-size: 2.5rem;
-    padding: 0.8em 0;
-    letter-spacing: 0.15rem;
-  }
+	.biznesy__h4 {
+		font-size: 2.5rem;
+		padding: 0.8em 0;
+		letter-spacing: 0.15rem;
+	}
 
-  .biznesy__text {
-    font-size: 1.3rem;
-    padding: 0.8em 1.2em;
-    line-height: 1.5em;
-  }
+	.biznesy__text {
+		font-size: 1.3rem;
+		padding: 0.8em 1.2em;
+		line-height: 1.5em;
+	}
 
-  .img-biznesy {
-    height: 50vh;
-    background-attachment: scroll;
-  }
+	.img-biznesy {
+		height: 50vh;
+		background-attachment: scroll;
+	}
 }
 /* sm – 576px do 767.98px */
 @container (min-width: 576px) and (max-width: 767.98px) {
-  .biznesy__title {
-    font-size: 3rem;
-  }
+	.biznesy__title {
+		font-size: 3rem;
+	}
 
-  .biznesy__h4 {
-    font-size: 2rem;
-    padding: 1em 1.5em;
-  }
+	.biznesy__h4 {
+		font-size: 2rem;
+		padding: 1em 1.5em;
+	}
 
-  .biznesy__text {
-    font-size: 1.4rem;
-    padding: 1em 1.5em;
-  }
+	.biznesy__text {
+		font-size: 1.4rem;
+		padding: 1em 1.5em;
+	}
 
-  .img-biznesy {
-    height: 60vh;
-  }
+	.img-biznesy {
+		height: 60vh;
+	}
 }
 
 /* md – 768px do 991.98px */
 @container (min-width: 768px) and (max-width: 991.98px) {
-  .biznesy {
-    font-size: 1.8rem;
-  }
+	.biznesy {
+		font-size: 1.8rem;
+	}
 
-  .biznesy__title {
-    font-size: 3.6rem;
-  }
+	.biznesy__title {
+		font-size: 3.6rem;
+	}
 
-  .biznesy__h4 {
-    font-size: 2.8rem;
-  }
+	.biznesy__h4 {
+		font-size: 2.8rem;
+	}
 
-  .biznesy__text {
-    font-size: 1.45rem;
-  }
+	.biznesy__text {
+		font-size: 1.45rem;
+	}
 
-  .img-biznesy {
-    height: 65vh;
-  }
+	.img-biznesy {
+		height: 65vh;
+	}
 }
 
 /* lg+ – od 992px */
 @container (min-width: 992px) {
-  .biznesy__title {
-    font-size: 4.2rem;
-  }
+	.biznesy__title {
+		font-size: 4.2rem;
+	}
 
-  .img-biznesy {
-    height: 70vh;
-    background-attachment: fixed;
-  }
+	.img-biznesy {
+		height: 70vh;
+		background-attachment: fixed;
+	}
 }
 .img-chaplain {
 	position: relative;
