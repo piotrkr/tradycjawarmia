@@ -3812,6 +3812,7 @@ p {
 @container (min-width:1200px) {
 	.school__photo {
 		width: 100vh;
+		transform: translateX(45%);
 	}
 }
 
@@ -3821,7 +3822,7 @@ p {
 	}
 	.school__photo {
 		width: 100vh;
-		transform: translateX(50%);
+		/* transform: translateX(50%); */
 	}
 }
 * {
