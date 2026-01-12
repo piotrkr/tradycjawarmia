@@ -2857,6 +2857,7 @@ p {
 	background-attachment: fixed;
 	filter: brightness(0.4);
 }
+
 @container (max-width:575.98px) {
 	.schola__h4,
 	.schola__h5 {
