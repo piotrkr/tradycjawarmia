@@ -24,7 +24,7 @@
 	height: 35px;
 	top: 0;
 	justify-content: space-between;
-	font-family: Fauna One, serif;
+	font-family: 'Fauna One', serif;
 	background-color: hsla(29, 41%, 88%, 0.2);
 	color: #fff;
 }
@@ -161,6 +161,7 @@
 	justify-content: space-between;
 	width: auto;
 }
+
 @container (max-width:1200px) {
 	.navbar {
 		display: none;
@@ -189,6 +190,9 @@
 	text-decoration: none;
 	color: #fff;
 	transition: color 0.3s;
+}
+.navbar__list a:nth-child(7) {
+	text-transform: uppercase;
 }
 .navbar__list a:hover {
 	color: #f9f5f1;
@@ -696,14 +700,13 @@
 }
 .support__info,
 .support__link {
-	font-size: 1.3rem;
-}
-.support__info {
-	padding: 0.5em;
+	font-size: 1rem;
+	padding-top: 1em;
 }
 .support__link {
 	padding: 0.5em 1em;
 	font-weight: 700;
+	margin-bottom: 1em;
 }
 .support__link a {
 	text-decoration: none;
@@ -760,7 +763,7 @@
 	}
 	.support__text {
 		font-size: 2rem;
-		line-height: 3rem;
+		line-height: 2rem;
 		padding: 0.5em 1em;
 	}
 }
@@ -1712,101 +1715,245 @@ p {
 		padding: 1em 2em;
 	}
 }
-.newsletter-container {
-	container-type: inline-size;
-	container-name: newsletter;
-	width: 100%;
-}
 .newsletter {
 	position: relative;
 	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
+	background-position: center;
 	overflow: hidden;
 }
-.newsletter__text,
-.newsletter__title {
-	text-align: center;
+
+.newsletter-container {
+	border-radius: 1.5rem;
+	max-width: 100%;
+	width: 100%;
 	position: relative;
-	z-index: 1;
+	overflow: hidden;
+
+	/* Włączamy container queries */
+	container-type: inline-size;
+	container-name: newsletter;
 }
+
+@container (320px <= width <= 576px) {
+	.newsletter-container {
+		height: 320px;
+	}
+}
+
+/* ==========================================================================
+   Typografia – mobile first + container queries + bootstrapowe breakpointy
+   ========================================================================== */
+
 .newsletter__title {
-	padding: 0.5em 1em;
-	font-family: Cinzel Decorative, serif;
+	font-family: 'Cinzel Decorative', serif;
 	color: #462f20;
-	letter-spacing: 0.3rem;
-	font-size: 3rem;
+	letter-spacing: 0.25rem;
+	text-align: center;
+	margin: 0;
+	padding: 1.25rem 1rem 0.75rem;
 }
-.newsletter__text {
-	font-family: Fauna One, serif;
-	font-size: 2rem;
-	padding: 0.5em 1em;
-	color: #462f20;
-	line-height: 3rem;
-}
-.newsletter__text span {
-	font-weight: 700;
-}
-@container newsletter (max-width:479px) {
+
+/* Container query – gdy kontener newslettera jest bardzo wąski */
+@container newsletter (max-width: 380px) {
 	.newsletter__title {
-		font-size: 2rem;
-		padding: 0.6em 1em;
-	}
-	.newsletter__text {
-		font-size: 1.5rem;
-		line-height: 2.4rem;
-	}
-}
-@container newsletter (max-width:576px) {
-	.newsletter__title {
-		font-size: 2.3rem;
-	}
-	.newsletter__text {
-		font-size: 1.7rem;
-		line-height: 2.7rem;
-	}
-}
-@container newsletter (min-width:577px) and (max-width:767px) {
-	.newsletter__title {
-		font-size: 2.7rem;
-	}
-	.newsletter__text {
 		font-size: 1.9rem;
-		line-height: 3rem;
+		letter-spacing: 0.15rem;
 	}
 }
-@container newsletter (max-width:440px) {
+
+@container newsletter (min-width: 381px) {
 	.newsletter__title {
-		font-size: 2.1rem;
-		letter-spacing: 0.2rem;
-	}
-	.newsletter__text {
-		font-size: 1.4rem;
+		font-size: 2.4rem;
 	}
 }
-@container newsletter (min-width:768px) {
+
+@container newsletter (min-width: 520px) {
 	.newsletter__title {
-		font-size: 3.2rem;
-		letter-spacing: 0.4rem;
-		padding: 0.8em 2em;
-	}
-	.newsletter__text {
-		font-size: 2.2rem;
-		line-height: 3.4rem;
-		padding: 0.8em 2em;
+		font-size: 2.9rem;
+		letter-spacing: 0.3rem;
 	}
 }
-@container newsletter (min-width:992px) {
+
+/* Bootstrapowe media queries – gdy chcemy większe tytuły na dużym ekranie */
+@media (min-width: 768px) {
+	/* md */
+	.newsletter__title {
+		font-size: 3.4rem;
+	}
+}
+
+@media (min-width: 992px) {
+	/* lg */
 	.newsletter__title {
 		font-size: 3rem;
-		letter-spacing: 0.3rem;
-		padding: 0.5em 1em;
-	}
-	.newsletter__text {
-		font-size: 2rem;
-		line-height: 3rem;
-		padding: 0.5em 1em;
 	}
 }
+
+/* ==========================================================================
+   Tekst + wrapper
+   ========================================================================== */
+
+.newsletter__text {
+	font-size: 1.1rem;
+	color: #462f20;
+	line-height: 1.65;
+	margin: 1rem 0 1.5rem;
+	text-align: center;
+	padding: 0 1.25rem;
+}
+
+@container newsletter (min-width: 460px) {
+	.newsletter__text {
+		font-size: 1.25rem;
+		padding: 0 2rem;
+	}
+}
+
+.newsletter__wrapper {
+	display: grid;
+	gap: 2.5rem;
+	align-items: center;
+}
+
+/* Na większych kontenerach dajemy więcej oddechu */
+@container newsletter (min-width: 680px) {
+	.newsletter__wrapper {
+		gap: 4rem;
+	}
+}
+
+/* ==========================================================================
+   Formularz – najważniejsze miejsce dla container queries
+   ========================================================================== */
+
+.newsletter__form {
+	margin-top: 1.5rem;
+	padding: 0 1rem;
+}
+
+.newsletter__input-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	background: white;
+	padding: 0.75rem;
+	border-radius: 999px;
+	box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.12);
+	border: 2px solid #462f20;
+	transition: all 0.3s ease;
+	max-width: max-content;
+	margin: 0 auto;
+}
+
+.newsletter__input-group:focus-within {
+	border-color: #667eea;
+	box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.18);
+}
+
+/* Od md w górę (Bootstrap) – układ poziomy */
+@media (min-width: 768px) {
+	.newsletter__input-group {
+		flex-direction: row;
+		padding: 0.6rem;
+	}
+}
+
+/* Container query – gdy mamy naprawdę dużo miejsca w komponencie */
+@container (min-width: 520px) {
+	.newsletter__input-group {
+		flex-direction: row;
+		padding: 0.6rem;
+	}
+}
+
+.newsletter__input-group input {
+	flex: 1;
+	min-width: 0; /* bardzo ważne przy flex */
+	border: none;
+	outline: none;
+	font-size: 1.05rem;
+	padding: 0.85rem 1.4rem;
+	background: transparent;
+}
+
+.newsletter__input-group input::placeholder {
+	color: #6b5a4a;
+}
+
+.newsletter__btn {
+	background: #d5beaf;
+	color: #1c130d;
+	border: none;
+	padding: 0.5em 1em;
+	border-radius: 999px;
+	font-family: 'Fauna One', serif;
+	font-weight: 700;
+	font-size: 0.8rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.8rem;
+	transition: all 0.3s ease;
+	white-space: nowrap;
+}
+
+.newsletter__btn:hover {
+	background-color: #63412c;
+	color: white;
+}
+
+@container (320px <= width <= 576px) {
+	.newsletter__input-group {
+		padding: 0;
+	}
+
+	.newsletter__btn {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		top: 91%;
+		font-size: 0.8rem;
+		padding: 1em;
+		margin: 0 auto;
+	}
+}
+/* ==========================================================================
+   Komunikaty sukces/błąd
+   ========================================================================== */
+
+.newsletter__message {
+	margin-top: 1.2rem;
+	font-weight: 500;
+	text-align: center;
+	min-height: 1.5em;
+}
+
+.newsletter__message.success,
+.newsletter__message.error {
+	font-family: 'Fauna One', serif;
+	padding-bottom: 1em;
+}
+
+@container (320px <= width <= 576px) {
+	.newsletter__message.success,
+	.newsletter__message.error {
+		padding-bottom: 3em;
+	}
+}
+
+/* ==========================================================================
+   Ostateczne poprawki na większych ekranach (opcjonalne)
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+	/* xl */
+	.newsletter-container {
+		border-radius: 2.5rem;
+	}
+}
+
 .footer {
 	container-type: inline-size;
 	position: relative;
@@ -1939,7 +2086,7 @@ p {
 }
 @container (max-width:576px) {
 	.footer__banners {
-		gap: 15px;
+		column-gap: 40px;
 	}
 	.footer__banners .ibp,
 	.footer__banners .missale,
@@ -2402,7 +2549,6 @@ p {
 	margin: 0 auto;
 	padding: 20px;
 	width: 1200px;
-	background-color: #fff;
 }
 .announcements-page {
 	color: #462f20;
@@ -2414,10 +2560,12 @@ p {
 	font-size: 2rem;
 	text-align: center;
 	color: #462f20;
+	letter-spacing: 0.1rem;
 }
 .announcements-page .announcements__subtitle {
 	font-weight: 700;
 	margin: 20px 0 10px;
+	letter-spacing: 0.05rem;
 }
 .announcements-page .announcements__text {
 	margin: 12px 0;
@@ -2703,11 +2851,11 @@ p {
 .img-schola {
 	position: relative;
 	height: 70vh;
-	background: url('../img/chór.jpg');
-	background-position: 50%;
+	background: url('../img/Schola.jpg');
+	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-	filter: brightness(0.6);
+	filter: brightness(0.4);
 }
 @container (max-width:575.98px) {
 	.schola__h4,
@@ -3002,14 +3150,11 @@ p {
 .chaplain {
 	font-size: 2rem;
 }
-.chaplain,
-.chaplain__title {
-	font-family: Cinzel Decorative, serif;
-}
 .chaplain__title {
 	position: absolute;
 	left: 50%;
 	top: 50%;
+	font-family: Cinzel Decorative, serif;
 	transform: translate(-50%, -50%);
 	font-size: 4rem;
 	color: #fff;
@@ -3017,52 +3162,127 @@ p {
 	padding: 0 1rem;
 	font-size: clamp(2.5rem, 8vw, 3.5rem);
 }
+
 .chaplain__container {
 	container-type: inline-size;
 	container-name: chaplain-content;
-	max-height: 100%;
+
 	width: 100%;
 	background: url('../img/swirl.png');
 	background-attachment: fixed;
 	color: #462f20;
+	padding: 1.5rem 1rem;
 }
-.chaplain__container img {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	border-radius: 12px;
-	margin: 0;
-	display: block;
-	max-width: 90%;
+
+/* -------------------------------------------------
+   Domyślny układ na małych ekranach (mobile first)
+   ------------------------------------------------- */
+.chaplain__grid {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
 }
-@container (min-width:576px) {
-	.chaplain__container img {
-		max-width: 70%;
-	}
-}
-@container (min-width:768px) {
-	.chaplain__container img {
-		max-width: 50%;
-	}
-}
-@container (min-width:992px) {
-	.chaplain__container img {
-		max-width: 40%;
-	}
-}
-.chaplain__container p {
-	padding: 0.5em 1em;
+
+.chaplain__photo {
+	width: 100%;
+	max-width: 380px;
 	text-align: center;
-	font-size: 1.1rem;
-	margin-top: 1em;
-	margin-bottom: 1em;
 }
-@container (min-width:768px) {
-	.chaplain__container p {
-		font-size: 1.3rem;
+
+.chaplain__photo img {
+	width: 80%;
+	height: auto;
+	border-radius: 12px;
+	border: 2px solid #462f20;
+	display: block;
+	margin: 0 auto;
+}
+
+.chaplain__text {
+	text-align: center;
+	padding: 0 0.8rem;
+}
+
+.chaplain__text h4 {
+	font-family: 'Fauna One', serif;
+	font-size: clamp(2rem, 5.5vw, 2.6rem);
+	margin-bottom: 2rem;
+}
+
+.chaplain__text p {
+	font-size: 1.1rem;
+	line-height: 1.45;
+	margin: 0.8em 0;
+}
+
+/* -------------------------------------------------
+   Od ~520–550px – układ dwukolumnowy
+   ------------------------------------------------- */
+@container chaplain-content (min-width: 520px) {
+	.chaplain__grid {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 3rem 4rem;
+		padding: 2rem;
+	}
+
+	.chaplain__photo {
+		order: 1;
+		flex: 0 0 auto;
+	}
+
+	.chaplain__text {
+		order: 2;
+		flex: 1 1 340px;
+		text-align: left;
+		padding: 0;
+	}
+
+	.chaplain__text h4 {
+		font-size: clamp(2.4rem, 4.2vw, 2.9rem);
+		text-align: left;
 	}
 }
-.chaplain__h4 {
+
+/* -------------------------------------------------
+   Większe ekrany – bardziej "premium" wygląd
+   ------------------------------------------------- */
+@container chaplain-content (min-width: 720px) {
+	.chaplain__photo img {
+		width: 360px;
+		/* ewentualnie: height: 440px; object-fit: cover; */
+	}
+
+	.chaplain__text h4 {
+		font-size: clamp(2.7rem, 4.5vw, 3.3rem);
+		text-align: center;
+	}
+
+	.chaplain__text p {
+		font-size: 1.25rem;
+	}
+}
+
+@container chaplain-content (min-width: 960px) {
+	.chaplain__grid {
+		gap: 7rem;
+	}
+
+	.chaplain__text h4 {
+		font-size: 3.5rem;
+		text-align: center;
+	}
+
+	.chaplain__text p {
+		font-size: 1.4rem;
+		padding-right: 1rem;
+	}
+}
+/* .chaplain__h4 {
 	padding: 1em 2em;
 	text-align: center;
 	font-family: Fauna One, serif;
@@ -3083,39 +3303,7 @@ p {
 	.chaplain__h4 {
 		font-size: 3rem;
 	}
-}
-.img-parish {
-	position: relative;
-	height: 70vh;
-	background: url('../img/Porządki.jpg');
-	background-position: 50%;
-	background-size: cover;
-	background-attachment: fixed;
-	filter: brightness(0.6);
-}
-.parish {
-	font-size: 2rem;
-}
-.parish,
-.parish__title {
-	font-family: Cinzel Decorative, serif;
-}
-.parish__title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 4rem;
-	color: #fff;
-	font-style: italic;
-}
-.parish__container {
-	max-height: 100%;
-	width: 100%;
-	background: url('../img/swirl.png');
-	background-attachment: fixed;
-	color: #462f20;
-}
+} */
 .img-novenas {
 	position: relative;
 	height: 70vh;
@@ -3283,306 +3471,6 @@ p {
 		font-size: 3.5rem;
 	}
 }
-.img-baptism {
-	position: relative;
-	height: 70vh;
-	background: url('../img/chrzest-4.jpg');
-	background-position: center 25%;
-	background-size: cover;
-	background-attachment: fixed;
-	filter: brightness(0.6);
-}
-.baptism {
-	font-size: 2rem;
-}
-.baptism,
-.baptism__h4 {
-	font-family: Cinzel Decorative, serif;
-}
-.baptism__h4 {
-	font-size: 3rem;
-	text-align: center;
-	padding: 1em 2em;
-}
-.baptism__text {
-	font-family: Fauna One, serif;
-	font-size: 1.5rem;
-	padding: 1em 2em;
-}
-.baptism__title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
-	font-size: 4rem;
-	color: #fff;
-	font-style: italic;
-}
-.baptism__container {
-	max-height: 100%;
-	width: 100%;
-	background: url('../img/swirl.png');
-	background-attachment: fixed;
-	color: #462f20;
-}
-.img-confirmation {
-	position: relative;
-	height: 70vh;
-	background: url('../img/bierzmowanie-1.jpg');
-	background-position: 50%;
-	background-size: cover;
-	background-attachment: fixed;
-	filter: brightness(0.6);
-}
-.confirmation {
-	font-size: 2rem;
-}
-.confirmation,
-.confirmation__h4 {
-	font-family: Cinzel Decorative, serif;
-}
-.confirmation__h4 {
-	font-size: 3rem;
-	text-align: center;
-	padding: 1em 2em;
-}
-.confirmation__text {
-	font-family: Fauna One, serif;
-	font-size: 1.5rem;
-	padding: 1em 2em;
-}
-.confirmation__title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
-	font-size: 4rem;
-	font-style: italic;
-	color: #fff;
-}
-.confirmation__container {
-	max-height: 100%;
-	width: 100%;
-	background: url('../img/swirl.png');
-	background-attachment: fixed;
-	color: #462f20;
-}
-.img-eucharist {
-	position: relative;
-	height: 70vh;
-	background: url('../img/Eucharystia-2.jpg');
-	background-position: bottom;
-	background-size: cover;
-	background-attachment: fixed;
-	filter: brightness(0.6);
-}
-.eucharist {
-	font-size: 2rem;
-}
-.eucharist,
-.eucharist__h4 {
-	font-family: Cinzel Decorative, serif;
-}
-.eucharist__h4 {
-	font-size: 3rem;
-	text-align: center;
-	padding: 1em 2em;
-}
-.eucharist__text {
-	font-family: Fauna One, serif;
-	font-size: 1.5rem;
-	padding: 1em 2em;
-}
-.eucharist__title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
-	font-size: 4rem;
-	color: #fff;
-	font-style: italic;
-}
-.eucharist__container {
-	max-height: 100%;
-	width: 100%;
-	background: url('../img/swirl.png');
-	background-attachment: fixed;
-	color: #462f20;
-}
-.img-confess {
-	position: relative;
-	height: 70vh;
-	background: url('../img/Spowiedź-1.jpg');
-	background-position: 50%;
-	background-attachment: fixed;
-	filter: brightness(0.6);
-}
-.confess {
-	font-size: 2rem;
-}
-.confess,
-.confess__h4 {
-	font-family: Cinzel Decorative, serif;
-}
-.confess__h4 {
-	font-size: 3rem;
-	text-align: center;
-	padding: 1em 2em;
-}
-.confess__text {
-	font-family: Fauna One, serif;
-	font-size: 1.5rem;
-	padding: 1em 2em;
-}
-.confess__title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
-	font-size: 4rem;
-	color: #fff;
-	font-style: italic;
-}
-.confess__container {
-	max-height: 100%;
-	width: 100%;
-	background: url('../img/swirl.png');
-	background-attachment: fixed;
-	color: #462f20;
-}
-.img-anointing {
-	position: relative;
-	height: 70vh;
-	background: url('../img/namaszczenie-2.jpg');
-	background-position: 50%;
-	background-size: cover;
-	background-attachment: fixed;
-	filter: brightness(0.7);
-}
-.anointing {
-	font-size: 2rem;
-}
-.anointing,
-.anointing__h4 {
-	font-family: Cinzel Decorative, serif;
-}
-.anointing__h4 {
-	font-size: 3rem;
-	text-align: center;
-	padding: 1em 2em;
-}
-.anointing__text {
-	font-family: Fauna One, serif;
-	font-size: 1.5rem;
-	padding: 1em 2em;
-}
-.anointing__title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
-	font-size: 4rem;
-	color: #fff;
-	font-style: italic;
-}
-.anointing__container {
-	max-height: 100%;
-	width: 100%;
-	background: url('../img/swirl.png');
-	background-attachment: fixed;
-	color: #462f20;
-}
-.img-priesthood {
-	position: relative;
-	height: 70vh;
-	background: url('../img/Najświętszy-Sakrament.jpg');
-	background-position: 50% 40%;
-	background-size: cover;
-	background-attachment: fixed;
-	filter: brightness(0.6);
-}
-.priesthood {
-	font-size: 2rem;
-}
-.priesthood,
-.priesthood__h4 {
-	font-family: Cinzel Decorative, serif;
-}
-.priesthood__h4 {
-	font-size: 3rem;
-	text-align: center;
-	padding: 1em 2em;
-}
-.priesthood__text {
-	font-family: Fauna One, serif;
-	font-size: 1.5rem;
-	padding: 1em 2em;
-}
-.priesthood__title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
-	font-size: 4rem;
-	color: #fff;
-	font-style: italic;
-}
-.priesthood__container {
-	max-height: 100%;
-	width: 100%;
-	background: url('../img/swirl.png');
-	background-attachment: fixed;
-	color: #462f20;
-}
-.img-marriage {
-	position: relative;
-	height: 70vh;
-	background: url('../img/Małżeństwo.jpg');
-	background-position: 25% 80%;
-	background-size: cover;
-	background-attachment: fixed;
-	filter: brightness(0.6);
-}
-.marriage {
-	font-size: 2rem;
-}
-.marriage,
-.marriage__h4 {
-	font-family: Cinzel Decorative, serif;
-}
-.marriage__h4 {
-	font-size: 3rem;
-	text-align: center;
-	padding: 1em 2em;
-}
-.marriage__text {
-	font-family: Fauna One, serif;
-	font-size: 1.5rem;
-	padding: 1em 2em;
-}
-.marriage__title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
-	font-size: 4rem;
-	color: #fff;
-	font-style: italic;
-}
-.marriage__container {
-	max-height: 100%;
-	width: 100%;
-	background: url('../img/swirl.png');
-	background-attachment: fixed;
-	color: #462f20;
-}
 #scrollTopBtn {
 	position: fixed;
 	bottom: 40px;
@@ -3641,10 +3529,10 @@ p {
 .img-school {
 	position: relative;
 	height: 70vh;
-	background: url('../img/school.jpg');
-	background-position: bottom;
+	background: url('../img/Szkwał.jpg');
+	background-position: 70% 50%;
 	background-size: cover;
-	filter: brightness(0.6);
+	filter: brightness(0.3);
 }
 .school {
 	font-size: 2rem;

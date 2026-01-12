@@ -38,7 +38,13 @@
                 <div class="img-cover"></div>
                 <div class="topbar">
                     <p class="topbar__address"><i class="fa-solid fa-location-dot"></i>Olsztyn, ul. Żniwna 7</p>
-                    <p class="topbar__phone"><i class="fa-solid fa-phone"></i>572 903 579</p>
+                    <p class="topbar__phone" style="color: #fff; font-family: 'Fauna One', serif;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span id="phoneReveal"
+                            style="cursor: pointer; color: rgba(255, 255, 255); padding-bottom: 2px;">
+                            pokaż numer
+                        </span>
+                    </p>
                     <p class="topbar__mail"><i class="fa-regular fa-envelope-open"></i>ibp.warmia@gmail.com</p>
                     <p class="topbar__mass"><i class="fa-solid fa-cross"></i></i>Msza Święta: niedziela godz. 10:30</p>
 
@@ -57,9 +63,6 @@
                         <ul class="navbar__list">
                             <a href="index.html"><img src="img/logo-white.svg"
                                     alt="Logo Duszpasterstwa Tradycji Warmińskiej" class="logo-white"></a>
-                            <!-- <a href="index.html">
-                    <li class="navbar__title">Strona główna</li>
-                </a> -->
                             <div class="navbar__list__first">
                                 <a href="#aktualnosci">
                                     <li class="navbar__title">Aktualności<span>+</span></li>
@@ -89,9 +92,6 @@
                                     </a>
                                 </ul>
                             </div>
-                            <a href="szkola.html">
-                                <li class="navbar__title">Szkoła</li>
-                            </a>
                             <div class="navbar__list__third">
                                 <a href="">
                                     <li class="navbar__title">Służba Boża<span>+</span></li>
@@ -100,12 +100,6 @@
                                     <a href="#masses">
                                         <li>Gdzie i kiedy?</li>
                                     </a>
-                                    <!-- <a href="nowenny.html">
-                            <li>Nowenny</li>
-                        </a> -->
-                                    <!-- <a href="rozaniec.html">
-                            <li>Różaniec</li>
-                        </a> -->
                                     <a href="wspolnoty.html">
                                         <li>Wspólnoty</li>
                                     </a>
@@ -119,9 +113,11 @@
                             <a href="kontakt.html">
                                 <li class="navbar__title">Kontakt</li>
                             </a>
+                            <a href="index.html#support">
+                                <li class="navbar__title">Wesprzyj nas</li>
+                            </a>
                         </ul>
                     </div>
-                    <a href="#support"><button class="navbar__button">Wesprzyj nas</button></a>
 
 
 
@@ -143,7 +139,7 @@
                             <a href="#" data-anchor="#aktualnosci">Aktualności<span>+</span></a>
                             <ul class="off__screen__add">
                                 <li><a href="ogloszenia.html">Ogłoszenia</a></li>
-                                <li><a href="#newsletter">Newsletter</a></li>
+                                <li><a href="index.html#newsletter">Newsletter</a></li>
                             </ul>
                         </li>
 
@@ -155,16 +151,16 @@
                                 <li><a href="sakramenty.html">Sakramenty</a></li>
                             </ul>
                         </li>
-                        <li class="off__screen__toggle"><a href="szkola.html">Szkoła</a></li>
                         <li class="off__screen__toggle">
                             <a href="#">Służba Boża<span>+</span></a>
                             <ul class="off__screen__add">
-                                <li><a href="#masses">Gdzie i kiedy?</a></li>
+                                <li><a href="index.html#masses">Gdzie i kiedy?</a></li>
                                 <li><a href="wspolnoty.html">Wspólnoty</a></li>
                             </ul>
                         </li>
                         <li class="off__screen__toggle"><a href="schola.html">Schola</a></li>
                         <li class="off__screen__toggle"><a href="kontakt.html">Kontakt</a></li>
+                        <li class="off__screen__toggle"><a href="index.html#support">Wesprzyj nas</a></li>
                     </ul>
                 </div>
 
@@ -293,20 +289,45 @@
 
         </section>
         <section class="newsletter newsletter-container" id="newsletter">
+            <div class="newsletter__wrapper">
+                <div class="newsletter__content">
+                    <h2 class="newsletter__title">
+                        Dołącz do newslettera
+                    </h2>
 
-            <h2 class="newsletter__title">Newsletter</h2>
-            <p class="newsletter__text">
-                Zapisz się na naszą listę mailingową. <br> Wyślij wiadomość email na adres
-                <span>ibp.warmia@gmail.com</span>
-            </p>
+                    <p class="newsletter__text">
+                        Zapisz się, by otrzymywać bieżące informacje
+                    </p>
 
+                    <!-- Formularz -->
+                    <form class="newsletter__form" id="newsletterForm" action="https://formspree.io/f/TWOJ_FORMSPREE_ID"
+                        method="POST">
+                        <div class="newsletter__input-group">
+                            <input type="email" name="email" id="email" placeholder="Twój adres e-mail" required
+                                aria-label="Adres e-mail" autocomplete="email" />
+                            <button type="submit" class="newsletter__btn">
+                                <span>Zapisz się</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
 
-        </section> <button id="scrollTopBtn" aria-label="Przewiń na górę">
+                        <!-- Komunikat o sukcesie / błędzie -->
+                        <div class="newsletter__message" id="formMessage" aria-live="polite"></div>
+
+                        <!-- Opcjonalne pola ukryte (dla Formspree / MailerLite itp.) -->
+                        <input type="hidden" name="_subject" value="Nowy subskrybent newslettera!">
+                        <input type="hidden" name="_next" value="https://twojadomena.pl/dziekujemy">
+                    </form>
+                </div>
+
+        </section>
+        <button id="scrollTopBtn" aria-label="Przewiń na górę">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 19V5M5 12l7-7 7 7" />
             </svg>
         </button>
+
         <section class="footer">
 
             <div class="footer__wrapper">
@@ -361,15 +382,17 @@
 
             <div class="footer__banners">
                 <a href="http://instytutdobregopasterza.pl/" target="_blank" rel="noopener noreferrer"><img
-                        src="img/LogoIBP_2.jpg" alt="" class="ibp"></a>
+                        src="img/LogoIBP_2.jpg" alt="Logo Instytutu Dobrego Pasterza" class="ibp"></a>
+                <a href="https://szkwal.com.pl/" target="_blank" rel="noopener noreferrer"><img
+                        src="img/szkwał_logo.jpg" alt="Herb szkoły Szkwał w Olsztynie" class="ibp"></a>
                 <a href="https://naukikatolickie.pl/" target="_blank" rel="noopener noreferrer"><img
-                        src="img/Nauki-Katolickie-impact-1024x389.webp" alt="" class="nauki"></a>
+                        src="img/Nauki-Katolickie-impact-1024x389.webp" alt="Logo Nauk Katolickich" class="nauki"></a>
                 <a href="https://pch24.pl/" target="_blank" rel="noopener noreferrer"><img src="img/logopch24.png"
-                        alt="" class="pch"></a>
-                <a href="https://www.pomocpatrioty.pl"><img src="img/logo_pomoc_patrioty.PNG" alt="Logo Pomoc Patrioty"
-                        class="patriot"></a>
-                <a href="https://archwarmia.pl/"><img src="img/herb-archwarmia.webp"
-                        alt="Herb Archidiecezji Warmińskiej" class="missale"></a>
+                        alt="Logo Polonia Christiana 24" class="pch"></a>
+                <a href="https://www.pomocpatrioty.pl" target="_blank" rel="noopener noreferrer"><img
+                        src="img/logo_pomoc_patrioty.PNG" alt="Logo Pomoc Patrioty" class="patriot"></a>
+                <a href="https://archwarmia.pl/" target="_blank" rel="noopener noreferrer"><img
+                        src="img/herb-archwarmia.webp" alt="Herb Archidiecezji Warmińskiej" class="missale"></a>
             </div>
 
             <p class="footer__copywright">
