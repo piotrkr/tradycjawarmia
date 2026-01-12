@@ -3047,7 +3047,6 @@ p {
 	font-family: Cinzel Decorative, serif;
 	font-size: 4rem;
 	color: #fff;
-	font-style: italic;
 }
 .biznesy__container {
 	max-height: 100%;
@@ -3136,6 +3135,11 @@ p {
 	.img-biznesy {
 		height: 70vh;
 		background-attachment: fixed;
+	}
+}
+@container (1200px <= width <= 1400px) {
+	.biznesy__title {
+		font-size: 3.5rem;
 	}
 }
 .img-chaplain {
