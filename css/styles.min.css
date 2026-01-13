@@ -3755,7 +3755,11 @@ button {
 	.img-priesthood,
 	.img-marriage,
 	.img-school {
-		background-attachment: scroll;
+		background-attachment: scroll !important;
+		/* Opcjonalnie - można dodatkowo złagodzić efekt */
+		background-position: center;
+		background-size: contain;  
+		/* ← odkomentuj jeśli chcesz jeszcze mocniej zmniejszyć zoom */
 	}
 }
 
