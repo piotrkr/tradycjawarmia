@@ -569,6 +569,7 @@
 	text-align: center;
 	letter-spacing: 0.3rem;
 }
+
 @container (max-width:576px) {
 	.announcements__title-main {
 		font-size: 2rem;
@@ -2557,6 +2558,13 @@ p {
 	line-height: 1.6;
 	margin-bottom: 40px;
 }
+
+.announcements-page a {
+	text-decoration: none;
+	color: #462f20;
+	font-weight: bold;
+}
+
 .announcements-page h4 {
 	margin-bottom: 20px;
 	font-size: 2rem;
