@@ -93,7 +93,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	color: #fff;
 	letter-spacing: 0.3rem;
 	pointer-events: none;
@@ -155,7 +157,9 @@
 
 .navbar {
 	padding: 0 1em;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-weight: 700;
 	font-size: 1.4rem;
 	justify-content: space-between;
@@ -278,7 +282,9 @@
 	left: 50%;
 	padding: 1em 2em;
 	font-size: 1.2rem;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	transform: translate(-50%);
@@ -387,7 +393,9 @@
 	justify-content: center;
 	text-align: center;
 	font-size: 3rem;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	scrollbar-width: none;
 	overflow-y: hidden;
 	overscroll-behavior-y: contain;
@@ -565,7 +573,9 @@
 .announcements__title-main {
 	padding: 0.5em 1em;
 	color: #462f20;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	text-align: center;
 	letter-spacing: 0.3rem;
 }
@@ -584,7 +594,9 @@
 	background-color: #d5beaf;
 	border-radius: 5px;
 	border: none;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	text-decoration: none;
 	letter-spacing: 1px;
 	color: #1c130d;
@@ -650,7 +662,9 @@
 .masses__text p,
 .masses__title {
 	text-align: center;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .masses__text p {
 	font-size: 1.2rem;
@@ -685,13 +699,17 @@
 }
 .support__title {
 	padding: 0.5em 1em;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	color: #462f20;
 	letter-spacing: 0.3rem;
 	font-size: 3rem;
 }
 .support__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 2rem;
 	padding: 0.5em 1em;
 	color: #462f20;
@@ -700,6 +718,13 @@
 .support__text span {
 	font-style: italic;
 }
+
+.support__info {
+	border-top: 1px solid #462f20;
+	width: 50%;
+	margin: 0 auto;
+}
+
 .support__info,
 .support__link {
 	font-size: 1rem;
@@ -779,7 +804,9 @@
 }
 .aboutus {
 	font-size: 2rem;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .aboutus__container {
 	max-height: 100%;
@@ -793,7 +820,9 @@
 .aboutus__h4,
 .aboutus__h5,
 .aboutus__h6 {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 3rem;
 	text-align: center;
 	padding: 0.5em 1em;
@@ -810,7 +839,9 @@
 	padding: 1em 2em;
 }
 .aboutus__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 1.5rem;
 	line-height: 1.5em;
 }
@@ -820,7 +851,9 @@
 	font-weight: 700;
 }
 .aboutus__quote {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 1.2rem;
 	text-align: right;
 	margin-top: 2em;
@@ -831,7 +864,9 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 4rem;
 	color: #fff;
 }
@@ -961,7 +996,9 @@
 .news-section .section-title {
 	position: relative;
 	text-align: center;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 3rem;
 	margin-bottom: 50px;
 	color: #462f20;
@@ -988,7 +1025,9 @@
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	transition: background 0.3s ease, transform 0.2s ease;
+	transition:
+		background 0.3s ease,
+		transform 0.2s ease;
 }
 .news-section .news-carousel__next:hover,
 .news-section .news-carousel__prev:hover {
@@ -1033,7 +1072,9 @@
 	border-radius: 12px;
 	overflow: hidden;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
 }
 .news-section .news-card:hover {
 	transform: translateY(-10px);
@@ -1049,7 +1090,9 @@
 	text-align: center;
 }
 .news-section .news-card__content .date {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 0.9rem;
 	color: #888;
 	margin-bottom: 10px;
@@ -1057,19 +1100,25 @@
 }
 .news-section .news-card__content h3 {
 	font-size: 1.4rem;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	margin: 0 0 15px;
 	color: #462f20;
 }
 .news-section .news-card__content p {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	line-height: 1.6;
 	margin-bottom: 20px;
 	color: #462f20;
 }
 .news-section .news-card__content a {
 	display: inline-block;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-weight: 600;
 	color: #462f20;
 	text-decoration: none;
@@ -1143,7 +1192,10 @@
 	margin: 0 auto;
 	line-height: 1.8;
 	font-size: 1.1rem;
-	font-family: Georgia, Times New Roman, serif;
+	font-family:
+		Georgia,
+		Times New Roman,
+		serif;
 }
 .article-title {
 	font-size: 2.8rem;
@@ -1152,7 +1204,9 @@
 }
 .article-date,
 .article-title {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	text-align: center;
 	color: #462f20;
 }
@@ -1162,7 +1216,9 @@
 	display: block;
 }
 p {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	text-align: center;
 }
 .article-image {
@@ -1178,7 +1234,9 @@ p {
 	text-align: center;
 	margin: 60px 0 20px;
 	font-weight: 600;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	color: #462f20;
 	text-decoration: none;
 	position: relative;
@@ -1230,7 +1288,9 @@ p {
 }
 .sacraments,
 .sacraments__h4 {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .sacraments__h4 {
 	font-size: 3rem;
@@ -1242,7 +1302,9 @@ p {
 	width: fit-content;
 }
 .sacraments__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 1.5rem;
 	padding: 1em 2em;
 }
@@ -1252,7 +1314,9 @@ p {
 	top: 50%;
 	width: 100%;
 	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 4rem;
 	color: #fff;
 }
@@ -1277,7 +1341,9 @@ p {
 	background: #fff;
 	border: 1px solid #ddd;
 	border-bottom: none;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 1.5rem;
 	color: #462f20;
 	display: flex;
@@ -1314,7 +1380,9 @@ p {
 .accordion__panel h3,
 .accordion__panel h4 {
 	padding: 1em 2em;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 }
 .accordion__panel h2 {
 	text-align: center;
@@ -1459,7 +1527,9 @@ p {
 }
 .photo {
 	position: relative;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	background-color: #f5ebe0;
 	background-image: url('../img/swirl.png');
 	background-attachment: fixed;
@@ -1684,7 +1754,9 @@ p {
 }
 .help__title {
 	text-align: center;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	letter-spacing: 0.3rem;
 	padding: 1em;
 	background-color: #a70000;
@@ -2025,7 +2097,9 @@ p {
 .footer__widget__first h3,
 .footer__widget__second h3,
 .footer__widget__third h3 {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 1.4rem;
 	padding-bottom: 1.2em;
 	color: #462f20;
@@ -2101,7 +2175,9 @@ p {
 	}
 }
 .footer__links {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -2122,7 +2198,9 @@ p {
 .footer__copywright {
 	text-align: center;
 	padding: 1em;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 0.85rem;
 	width: 100%;
 }
@@ -2254,7 +2332,9 @@ p {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 4rem;
 	color: #fff;
 }
@@ -2269,7 +2349,9 @@ p {
 .contact__headline,
 .contact__left-side {
 	text-align: center;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	color: #462f20;
 }
 .contact__left-side {
@@ -2312,7 +2394,9 @@ p {
 }
 .contact__description,
 .contact__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	margin-bottom: 1em;
 }
 .contact__description {
@@ -2332,7 +2416,9 @@ p {
 	width: 100%;
 	border: none;
 	outline: none;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 0.8rem;
 	background: #f0f1f8;
 	border-radius: 6px;
@@ -2354,7 +2440,9 @@ p {
 	padding: 8px 16px;
 	border-radius: 6px;
 	background: #dbc1a9;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
@@ -2500,7 +2588,9 @@ p {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 4rem;
 	color: #fff;
 }
@@ -2520,14 +2610,18 @@ p {
 .announcements__h4,
 .announcements__text {
 	padding: 1em 2em;
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 }
 .announcements__h4 {
 	font-size: 2rem;
 	text-transform: uppercase;
 }
 .announcements__subtitle {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	padding-bottom: 1em;
 	font-size: 1.5rem;
 	text-align: center;
@@ -2766,7 +2860,9 @@ p {
 }
 .rosary,
 .rosary__h4 {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .rosary__h4 {
 	font-size: 3rem;
@@ -2774,7 +2870,9 @@ p {
 	padding: 1em 2em;
 }
 .rosary__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 1.5rem;
 	padding: 1em 2em;
 }
@@ -2783,7 +2881,9 @@ p {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 4rem;
 	color: #fff;
 	font-style: italic;
@@ -2797,7 +2897,9 @@ p {
 }
 .schola {
 	font-size: 2rem;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .schola__container {
 	max-height: 100%;
@@ -2810,7 +2912,9 @@ p {
 }
 .schola__h4,
 .schola__h5 {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 3rem;
 	text-align: center;
 	padding-top: 1em;
@@ -2832,7 +2936,9 @@ p {
 .schola__contact,
 .schola__source,
 .schola__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 1.5rem;
 	font-style: italic;
 	padding: 1em 2em;
@@ -2854,7 +2960,9 @@ p {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 4rem;
 	color: #fff;
 }
@@ -3007,7 +3115,9 @@ p {
 }
 .trident,
 .trident__title {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .trident__title {
 	position: absolute;
@@ -3038,7 +3148,9 @@ p {
 }
 .biznesy,
 .biznesy__h4 {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .biznesy__h4 {
 	font-size: 3rem;
@@ -3046,7 +3158,9 @@ p {
 	padding: 1em 2em;
 }
 .biznesy__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 1.5rem;
 	padding: 1em 2em;
 }
@@ -3055,7 +3169,9 @@ p {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 4rem;
 	color: #fff;
 }
@@ -3169,7 +3285,9 @@ p {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	transform: translate(-50%, -50%);
 	font-size: 4rem;
 	color: #fff;
@@ -3333,7 +3451,9 @@ p {
 }
 .novenas,
 .novenas__h4 {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .novenas__h4 {
 	font-size: 3rem;
@@ -3341,7 +3461,9 @@ p {
 	padding: 1em 2em;
 }
 .novenas__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 1.5rem;
 	padding: 1em 2em;
 }
@@ -3350,7 +3472,9 @@ p {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 4rem;
 	color: #fff;
 	font-style: italic;
@@ -3554,7 +3678,9 @@ p {
 }
 .school,
 .school__title {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 }
 .school__title {
 	position: absolute;
@@ -3574,7 +3700,9 @@ p {
 	container-name: school-container;
 }
 .school__container h4 {
-	font-family: Cinzel Decorative, serif;
+	font-family:
+		Cinzel Decorative,
+		serif;
 	font-size: 3rem;
 	font-style: italic;
 	text-align: center;
@@ -3602,7 +3730,9 @@ p {
 }
 .school__links,
 .school__text {
-	font-family: Fauna One, serif;
+	font-family:
+		Fauna One,
+		serif;
 	font-size: 2rem;
 }
 .school__links {
