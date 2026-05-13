@@ -68,13 +68,18 @@
 	left: 0;
 	margin-left: 3em;
 }
-.topbar__mail {
+
+.topbar__mail a {
+	text-decoration: none;
+	color: #fff;
 	transition: color 0.3s;
 	cursor: pointer;
 }
-.topbar__mail:hover {
+
+.topbar__mail a:hover {
 	color: #d7ccc1;
 }
+
 @container topbar (max-width:1200px) {
 	.topbar__mass {
 		display: none;
